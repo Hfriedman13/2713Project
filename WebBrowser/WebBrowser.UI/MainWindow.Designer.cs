@@ -210,6 +210,7 @@
             this.btnGo.Name = "btnGo";
             this.btnGo.Size = new System.Drawing.Size(46, 36);
             this.btnGo.Text = "GO";
+            this.btnGo.Click += new System.EventHandler(this.btnGo_Click);
             // 
             // btnBookmark
             // 

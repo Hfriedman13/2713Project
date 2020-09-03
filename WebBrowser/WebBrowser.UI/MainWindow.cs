@@ -48,12 +48,7 @@ namespace WebBrowser.UI
         private void btnGo_Click(object sender, EventArgs e)
         {
             string url = txtBoxAddress.Text;
-
-            if (Uri.IsWellFormedUriString(url, UriKind.RelativeOrAbsolute))
-            {
-                tabPage1.Text = url;
-                webBrowser1.Navigate(url);
-            }
+            webBrowser1.Navigate(url);
         }
     }
 }
