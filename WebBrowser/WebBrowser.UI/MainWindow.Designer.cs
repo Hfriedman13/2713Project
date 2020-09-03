@@ -48,8 +48,14 @@
             this.txtBoxAddress = new System.Windows.Forms.ToolStripTextBox();
             this.btnGo = new System.Windows.Forms.ToolStripButton();
             this.btnBookmark = new System.Windows.Forms.ToolStripButton();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -81,31 +87,31 @@
             // newTabMenuItem
             // 
             this.newTabMenuItem.Name = "newTabMenuItem";
-            this.newTabMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.newTabMenuItem.Size = new System.Drawing.Size(337, 44);
             this.newTabMenuItem.Text = "New Tab";
             // 
             // closeCurrentTabMenuItem
             // 
             this.closeCurrentTabMenuItem.Name = "closeCurrentTabMenuItem";
-            this.closeCurrentTabMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.closeCurrentTabMenuItem.Size = new System.Drawing.Size(337, 44);
             this.closeCurrentTabMenuItem.Text = "Close Current Tab";
             // 
             // saveAsHTMLMenuItem
             // 
             this.saveAsHTMLMenuItem.Name = "saveAsHTMLMenuItem";
-            this.saveAsHTMLMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.saveAsHTMLMenuItem.Size = new System.Drawing.Size(337, 44);
             this.saveAsHTMLMenuItem.Text = "Save as HTML";
             // 
             // printPageMenuItem
             // 
             this.printPageMenuItem.Name = "printPageMenuItem";
-            this.printPageMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.printPageMenuItem.Size = new System.Drawing.Size(337, 44);
             this.printPageMenuItem.Text = "Print Page";
             // 
             // ExitMenuItem
             // 
             this.ExitMenuItem.Name = "ExitMenuItem";
-            this.ExitMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.ExitMenuItem.Size = new System.Drawing.Size(337, 44);
             this.ExitMenuItem.Text = "Exit";
             this.ExitMenuItem.Click += new System.EventHandler(this.ExitMenuItem_Click);
             // 
@@ -195,6 +201,7 @@
             this.txtBoxAddress.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtBoxAddress.Name = "txtBoxAddress";
             this.txtBoxAddress.Size = new System.Drawing.Size(100, 42);
+            this.txtBoxAddress.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBoxAddress_KeyUp);
             // 
             // btnGo
             // 
@@ -214,11 +221,52 @@
             this.btnBookmark.Size = new System.Drawing.Size(46, 36);
             this.btnBookmark.Text = "toolStripButton1";
             // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(0, 85);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(800, 360);
+            this.tabControl1.TabIndex = 2;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.webBrowser1);
+            this.tabPage1.Location = new System.Drawing.Point(8, 39);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(784, 313);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(8, 39);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(184, 53);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webBrowser1.Location = new System.Drawing.Point(3, 3);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(778, 307);
+            this.webBrowser1.TabIndex = 0;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -228,6 +276,8 @@
             this.menuStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -254,5 +304,9 @@
         private System.Windows.Forms.ToolStripTextBox txtBoxAddress;
         private System.Windows.Forms.ToolStripButton btnGo;
         private System.Windows.Forms.ToolStripButton btnBookmark;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.WebBrowser webBrowser1;
+        private System.Windows.Forms.TabPage tabPage2;
     }
 }

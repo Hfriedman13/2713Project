@@ -29,5 +29,25 @@ namespace WebBrowser.UI
                 "\n" + "I am very excited about creating this and cant wait to explore more of Win. Forms!");
 
         }
+
+        private void txtBoxAddress_KeyUp(object sender, KeyEventArgs e)
+        {
+            //if (e.KeyCode == Keys.Enter)
+            //{
+            //    string url = txtBoxAddress.Text;
+
+            //    if (Uri.IsWellFormedUriString(url, UriKind.RelativeOrAbsolute))
+            //    {
+            //        tabPage1.Text = url;
+            //        webBrowser1.Navigate(url);
+            //    }
+            //}
+        }
     }
-}
+
+        //private void btnGo_Click(object sender, EventArgs e)
+       // {
+            //txtBoxAddress_KeyUp(sender, e);
+       // }
+    }
+//}
