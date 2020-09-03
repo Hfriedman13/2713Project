@@ -1,0 +1,12 @@
+C:\Users\SeaMonster\Desktop\CPSC2713-MainProj\WebBrowser\WebBrowser.Logic\bin\Debug\netstandard2.0\WebBrowser.Logic.deps.json
+C:\Users\SeaMonster\Desktop\CPSC2713-MainProj\WebBrowser\WebBrowser.Logic\bin\Debug\netstandard2.0\WebBrowser.Logic.dll
+C:\Users\SeaMonster\Desktop\CPSC2713-MainProj\WebBrowser\WebBrowser.Logic\bin\Debug\netstandard2.0\WebBrowser.Logic.pdb
+C:\Users\SeaMonster\Desktop\CPSC2713-MainProj\WebBrowser\WebBrowser.Logic\bin\Debug\netstandard2.0\WebBrowser.Data.dll
+C:\Users\SeaMonster\Desktop\CPSC2713-MainProj\WebBrowser\WebBrowser.Logic\bin\Debug\netstandard2.0\WebBrowser.Data.pdb
+C:\Users\SeaMonster\Desktop\CPSC2713-MainProj\WebBrowser\WebBrowser.Logic\obj\Debug\netstandard2.0\WebBrowser.Logic.csprojAssemblyReference.cache
+C:\Users\SeaMonster\Desktop\CPSC2713-MainProj\WebBrowser\WebBrowser.Logic\obj\Debug\netstandard2.0\WebBrowser.Logic.AssemblyInfoInputs.cache
+C:\Users\SeaMonster\Desktop\CPSC2713-MainProj\WebBrowser\WebBrowser.Logic\obj\Debug\netstandard2.0\WebBrowser.Logic.AssemblyInfo.cs
+C:\Users\SeaMonster\Desktop\CPSC2713-MainProj\WebBrowser\WebBrowser.Logic\obj\Debug\netstandard2.0\WebBrowser.Logic.csproj.CoreCompileInputs.cache
+C:\Users\SeaMonster\Desktop\CPSC2713-MainProj\WebBrowser\WebBrowser.Logic\obj\Debug\netstandard2.0\WebBrowser.Logic.csproj.CopyComplete
+C:\Users\SeaMonster\Desktop\CPSC2713-MainProj\WebBrowser\WebBrowser.Logic\obj\Debug\netstandard2.0\WebBrowser.Logic.dll
+C:\Users\SeaMonster\Desktop\CPSC2713-MainProj\WebBrowser\WebBrowser.Logic\obj\Debug\netstandard2.0\WebBrowser.Logic.pdb
