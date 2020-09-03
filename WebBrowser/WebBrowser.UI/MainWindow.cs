@@ -17,9 +17,17 @@ namespace WebBrowser.UI
             InitializeComponent();
         }
 
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ExitMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void HelpMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Hannah Friedman, hzf0023" + "\n" + 
+                "This is my very first web browser as well as my first large project with c#" +
+                "\n" + "I am very excited about creating this and cant wait to explore more of Win. Forms!");
+
         }
     }
 }

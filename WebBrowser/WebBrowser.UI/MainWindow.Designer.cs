@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.newTabToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.closeCurrentTabToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveAsHTMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.printPageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.manageHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.manageBookmarksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fileMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newTabMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.closeCurrentTabMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveAsHTMLMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.printPageMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ExitMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manageHistoryMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manageBookmarksMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.HelpMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,84 +47,85 @@
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.toolsToolStripMenuItem,
-            this.helpToolStripMenuItem});
+            this.fileMenuItem,
+            this.toolsMenuItem,
+            this.HelpMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 42);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // fileToolStripMenuItem
+            // fileMenuItem
             // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.newTabToolStripMenuItem,
-            this.closeCurrentTabToolStripMenuItem,
-            this.saveAsHTMLToolStripMenuItem,
-            this.printPageToolStripMenuItem,
-            this.exitToolStripMenuItem});
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(72, 38);
-            this.fileToolStripMenuItem.Text = "File";
+            this.fileMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newTabMenuItem,
+            this.closeCurrentTabMenuItem,
+            this.saveAsHTMLMenuItem,
+            this.printPageMenuItem,
+            this.ExitMenuItem});
+            this.fileMenuItem.Name = "fileMenuItem";
+            this.fileMenuItem.Size = new System.Drawing.Size(72, 38);
+            this.fileMenuItem.Text = "File";
             // 
-            // toolsToolStripMenuItem
+            // newTabMenuItem
             // 
-            this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.manageHistoryToolStripMenuItem,
-            this.manageBookmarksToolStripMenuItem});
-            this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(90, 36);
-            this.toolsToolStripMenuItem.Text = "Tools";
+            this.newTabMenuItem.Name = "newTabMenuItem";
+            this.newTabMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.newTabMenuItem.Text = "New Tab";
             // 
-            // helpToolStripMenuItem
+            // closeCurrentTabMenuItem
             // 
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(85, 36);
-            this.helpToolStripMenuItem.Text = "Help";
+            this.closeCurrentTabMenuItem.Name = "closeCurrentTabMenuItem";
+            this.closeCurrentTabMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.closeCurrentTabMenuItem.Text = "Close Current Tab";
             // 
-            // newTabToolStripMenuItem
+            // saveAsHTMLMenuItem
             // 
-            this.newTabToolStripMenuItem.Name = "newTabToolStripMenuItem";
-            this.newTabToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
-            this.newTabToolStripMenuItem.Text = "New Tab";
+            this.saveAsHTMLMenuItem.Name = "saveAsHTMLMenuItem";
+            this.saveAsHTMLMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.saveAsHTMLMenuItem.Text = "Save as HTML";
             // 
-            // closeCurrentTabToolStripMenuItem
+            // printPageMenuItem
             // 
-            this.closeCurrentTabToolStripMenuItem.Name = "closeCurrentTabToolStripMenuItem";
-            this.closeCurrentTabToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
-            this.closeCurrentTabToolStripMenuItem.Text = "Close Current Tab";
+            this.printPageMenuItem.Name = "printPageMenuItem";
+            this.printPageMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.printPageMenuItem.Text = "Print Page";
             // 
-            // saveAsHTMLToolStripMenuItem
+            // ExitMenuItem
             // 
-            this.saveAsHTMLToolStripMenuItem.Name = "saveAsHTMLToolStripMenuItem";
-            this.saveAsHTMLToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
-            this.saveAsHTMLToolStripMenuItem.Text = "Save as HTML";
+            this.ExitMenuItem.Name = "ExitMenuItem";
+            this.ExitMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.ExitMenuItem.Text = "Exit";
+            this.ExitMenuItem.Click += new System.EventHandler(this.ExitMenuItem_Click);
             // 
-            // printPageToolStripMenuItem
+            // toolsMenuItem
             // 
-            this.printPageToolStripMenuItem.Name = "printPageToolStripMenuItem";
-            this.printPageToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
-            this.printPageToolStripMenuItem.Text = "Print Page";
+            this.toolsMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.manageHistoryMenuItem,
+            this.manageBookmarksMenuItem});
+            this.toolsMenuItem.Name = "toolsMenuItem";
+            this.toolsMenuItem.Size = new System.Drawing.Size(90, 38);
+            this.toolsMenuItem.Text = "Tools";
             // 
-            // exitToolStripMenuItem
+            // manageHistoryMenuItem
             // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            this.manageHistoryMenuItem.Name = "manageHistoryMenuItem";
+            this.manageHistoryMenuItem.Size = new System.Drawing.Size(360, 44);
+            this.manageHistoryMenuItem.Text = "Manage History";
             // 
-            // manageHistoryToolStripMenuItem
+            // manageBookmarksMenuItem
             // 
-            this.manageHistoryToolStripMenuItem.Name = "manageHistoryToolStripMenuItem";
-            this.manageHistoryToolStripMenuItem.Size = new System.Drawing.Size(360, 44);
-            this.manageHistoryToolStripMenuItem.Text = "Manage History";
+            this.manageBookmarksMenuItem.Name = "manageBookmarksMenuItem";
+            this.manageBookmarksMenuItem.Size = new System.Drawing.Size(360, 44);
+            this.manageBookmarksMenuItem.Text = "Manage Bookmarks";
             // 
-            // manageBookmarksToolStripMenuItem
+            // HelpMenuItem
             // 
-            this.manageBookmarksToolStripMenuItem.Name = "manageBookmarksToolStripMenuItem";
-            this.manageBookmarksToolStripMenuItem.Size = new System.Drawing.Size(360, 44);
-            this.manageBookmarksToolStripMenuItem.Text = "Manage Bookmarks";
+            this.HelpMenuItem.Name = "HelpMenuItem";
+            this.HelpMenuItem.Size = new System.Drawing.Size(85, 38);
+            this.HelpMenuItem.Text = "Help";
+            this.HelpMenuItem.Click += new System.EventHandler(this.HelpMenuItem_Click);
             // 
             // MainWindow
             // 
@@ -145,15 +146,15 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem newTabToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem closeCurrentTabToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem saveAsHTMLToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem printPageToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem manageHistoryToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem manageBookmarksToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fileMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem newTabMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem closeCurrentTabMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveAsHTMLMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem printPageMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ExitMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolsMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem manageHistoryMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem manageBookmarksMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem HelpMenuItem;
     }
 }
