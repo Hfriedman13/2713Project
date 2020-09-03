@@ -45,16 +45,16 @@ namespace WebBrowser.UI
         }
     
 
-    private void btnGo_Click(object sender, EventArgs e)
-    {
-        string url = txtBoxAddress.Text;
-
-        if (Uri.IsWellFormedUriString(url, UriKind.RelativeOrAbsolute))
+        private void btnGo_Click(object sender, EventArgs e)
         {
-            tabPage1.Text = url;
-            webBrowser1.Navigate(url);
+            string url = txtBoxAddress.Text;
+
+            if (Uri.IsWellFormedUriString(url, UriKind.RelativeOrAbsolute))
+            {
+                tabPage1.Text = url;
+                webBrowser1.Navigate(url);
+            }
         }
     }
-}
 }
 

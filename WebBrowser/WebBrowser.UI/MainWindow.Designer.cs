@@ -59,6 +59,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileMenuItem,
@@ -196,6 +197,7 @@
             // 
             // txtBoxAddress
             // 
+            this.txtBoxAddress.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtBoxAddress.Name = "txtBoxAddress";
             this.txtBoxAddress.Size = new System.Drawing.Size(250, 42);
             this.txtBoxAddress.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBoxAddress_KeyUp);
@@ -244,6 +246,7 @@
             this.webBrowser1.Location = new System.Drawing.Point(3, 3);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.ScriptErrorsSuppressed = true;
             this.webBrowser1.Size = new System.Drawing.Size(1346, 741);
             this.webBrowser1.TabIndex = 0;
             // 
