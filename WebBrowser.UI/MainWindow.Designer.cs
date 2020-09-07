@@ -39,11 +39,11 @@
             this.manageHistoryMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageBookmarksMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HelpMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.newTabUserControl1 = new WebBrowser.UI.NewTabUserControl();
             this.menuStrip1.SuspendLayout();
-            this.tabControl1.SuspendLayout();
+            this.tabPage.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -138,12 +138,12 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Location = new System.Drawing.Point(0, 88);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1853, 976);
-            this.tabControl1.TabIndex = 2;
+            this.tabPage.Controls.Add(this.tabPage1);
+            this.tabPage.Location = new System.Drawing.Point(0, 88);
+            this.tabPage.Name = "tabControl1";
+            this.tabPage.SelectedIndex = 0;
+            this.tabPage.Size = new System.Drawing.Size(1853, 976);
+            this.tabPage.TabIndex = 2;
             // 
             // tabPage1
             // 
@@ -168,14 +168,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1865, 1210);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tabPage);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainWindow";
             this.Text = "MainWindow";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
+            this.tabPage.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -197,6 +197,6 @@
         private System.Windows.Forms.ToolStripMenuItem HelpMenuItem;
         private System.Windows.Forms.TabPage tabPage1;
         private NewTabUserControl newTabUserControl1;
-        public System.Windows.Forms.TabControl tabControl1;
+        public System.Windows.Forms.TabControl tabPage;
     }
 }

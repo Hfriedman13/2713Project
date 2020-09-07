@@ -15,6 +15,18 @@ namespace WebBrowser.UI
     {
         Stack<string> backLinks = new Stack<string>();
         Stack<string> forwardLinks = new Stack<string>();
+
+        private static NewTabUserControl _instance;
+        public static NewTabUserControl Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new NewTabUserControl();
+                return _instance;
+            }
+        }
+
         public NewTabUserControl()
         {
             InitializeComponent();
@@ -63,9 +75,7 @@ namespace WebBrowser.UI
         //Refresh Button
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-           
              webBrowser1.Refresh();
-            
         }
         //Home Button
 
