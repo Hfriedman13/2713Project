@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebBrowser.UI", "WebBrowser.UI\WebBrowser.UI.csproj", "{2D6DEEAB-E89C-4119-B6FB-586605273480}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebBrowser.Logic", "WebBrowser.Logic\WebBrowser.Logic.csproj", "{50EC285C-9A18-4335-BB28-C72C9BC70211}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebBrowser.Logic", "WebBrowser.Logic\WebBrowser.Logic.csproj", "{50EC285C-9A18-4335-BB28-C72C9BC70211}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebBrowser.Data", "WebBrowser.Data\WebBrowser.Data.csproj", "{01BFEE71-1BB8-48D4-82F6-F9C5CA521822}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebBrowser.Data", "WebBrowser.Data\WebBrowser.Data.csproj", "{01BFEE71-1BB8-48D4-82F6-F9C5CA521822}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
