@@ -57,7 +57,7 @@
             this.HelpMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1865, 40);
+            this.menuStrip1.Size = new System.Drawing.Size(1865, 42);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -70,7 +70,7 @@
             this.printPageMenuItem,
             this.ExitMenuItem});
             this.fileMenuItem.Name = "fileMenuItem";
-            this.fileMenuItem.Size = new System.Drawing.Size(72, 36);
+            this.fileMenuItem.Size = new System.Drawing.Size(72, 38);
             this.fileMenuItem.Text = "File";
             // 
             // newTabMenuItem
@@ -79,6 +79,7 @@
             this.newTabMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
             this.newTabMenuItem.Size = new System.Drawing.Size(427, 44);
             this.newTabMenuItem.Text = "New Tab";
+            this.newTabMenuItem.Click += new System.EventHandler(this.newTabMenuItem_Click);
             // 
             // closeCurrentTabMenuItem
             // 
@@ -86,6 +87,7 @@
             this.closeCurrentTabMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.W)));
             this.closeCurrentTabMenuItem.Size = new System.Drawing.Size(427, 44);
             this.closeCurrentTabMenuItem.Text = "Close Current Tab";
+            this.closeCurrentTabMenuItem.Click += new System.EventHandler(this.closeCurrentTabMenuItem_Click);
             // 
             // saveAsHTMLMenuItem
             // 
@@ -112,7 +114,7 @@
             this.manageHistoryMenuItem,
             this.manageBookmarksMenuItem});
             this.toolsMenuItem.Name = "toolsMenuItem";
-            this.toolsMenuItem.Size = new System.Drawing.Size(90, 36);
+            this.toolsMenuItem.Size = new System.Drawing.Size(90, 38);
             this.toolsMenuItem.Text = "Tools";
             // 
             // manageHistoryMenuItem
@@ -130,7 +132,7 @@
             // HelpMenuItem
             // 
             this.HelpMenuItem.Name = "HelpMenuItem";
-            this.HelpMenuItem.Size = new System.Drawing.Size(85, 36);
+            this.HelpMenuItem.Size = new System.Drawing.Size(85, 38);
             this.HelpMenuItem.Text = "Help";
             this.HelpMenuItem.Click += new System.EventHandler(this.HelpMenuItem_Click);
             // 

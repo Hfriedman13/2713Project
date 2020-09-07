@@ -25,6 +25,8 @@ namespace WebBrowser.UI
         //Back Button 
         private void btnBack_Click(object sender, EventArgs e)
         {
+            MessageBox.Show(backLinks.ToString());
+
             try
             {
                 string url = txtBoxAddressbar.Text;
@@ -42,6 +44,7 @@ namespace WebBrowser.UI
         //Forward Button
         private void btnForward_Click(object sender, EventArgs e)
         {
+           
             try
             {
                 string url = txtBoxAddressbar.Text;
@@ -60,6 +63,8 @@ namespace WebBrowser.UI
         //Refresh Button
         private void btnRefresh_Click(object sender, EventArgs e)
         {
+           
+             webBrowser1.Refresh();
             
         }
         //Home Button

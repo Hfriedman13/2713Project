@@ -31,7 +31,20 @@ namespace WebBrowser.UI
 
         }
 
-        
+        private void newTabMenuItem_Click(object sender, EventArgs e)
+        {
+            string title = "TabPage " + (tabControl1.TabCount + 1).ToString();
+            TabPage myTabPage = new TabPage(title);
+            tabControl1.TabPages.Add(myTabPage);
+        }
+
+        private void closeCurrentTabMenuItem_Click(object sender, EventArgs e)
+        {
+            // Removes the selected tab:  
+            tabControl1.TabPages.Remove(tabControl1.SelectedTab);
+            // Removes all the tabs:  
+            tabControl1.TabPages.Clear();
+        }
     }
 }
 
