@@ -25,27 +25,36 @@ namespace WebBrowser.UI
         //Back Button 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            
-            forwardLinks.Push(txtBoxAddressbar.Text);
+            try
+            {
+                string url = txtBoxAddressbar.Text;
+                forwardLinks.Push(url);
 
-            String url = txtBoxAddressbar.Text;
-            backLinks.Push(url);
-            webBrowser1.Navigate(url);
-
-            
+                string newUrl = backLinks.Pop();
+                webBrowser1.Navigate(newUrl);
+            }
+            catch(ArgumentException)
+            {
+                Console.WriteLine("Null Error To Go Backwards");
+            }
         }
 
         //Forward Button
         private void btnForward_Click(object sender, EventArgs e)
         {
-            foreach (var item in forwardLinks)
+            try
             {
-                backLinks.Push(txtBoxAddressbar.Text);
-
                 string url = txtBoxAddressbar.Text;
-                forwardLinks.Pop()
-                webBrowser1.Navigate(url);
+                backLinks.Push(url);
+
+                string newUrl = forwardLinks.Pop();
+                webBrowser1.Navigate(newUrl);
             }
+            catch(NullReferenceException)
+            {
+                Console.WriteLine("Null Error To Go Forwards");
+            }
+            
         }
 
         //Refresh Button

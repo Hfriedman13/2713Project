@@ -76,31 +76,33 @@
             // newTabMenuItem
             // 
             this.newTabMenuItem.Name = "newTabMenuItem";
-            this.newTabMenuItem.Size = new System.Drawing.Size(337, 44);
+            this.newTabMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
+            this.newTabMenuItem.Size = new System.Drawing.Size(427, 44);
             this.newTabMenuItem.Text = "New Tab";
             // 
             // closeCurrentTabMenuItem
             // 
             this.closeCurrentTabMenuItem.Name = "closeCurrentTabMenuItem";
-            this.closeCurrentTabMenuItem.Size = new System.Drawing.Size(337, 44);
+            this.closeCurrentTabMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.W)));
+            this.closeCurrentTabMenuItem.Size = new System.Drawing.Size(427, 44);
             this.closeCurrentTabMenuItem.Text = "Close Current Tab";
             // 
             // saveAsHTMLMenuItem
             // 
             this.saveAsHTMLMenuItem.Name = "saveAsHTMLMenuItem";
-            this.saveAsHTMLMenuItem.Size = new System.Drawing.Size(337, 44);
+            this.saveAsHTMLMenuItem.Size = new System.Drawing.Size(427, 44);
             this.saveAsHTMLMenuItem.Text = "Save as HTML";
             // 
             // printPageMenuItem
             // 
             this.printPageMenuItem.Name = "printPageMenuItem";
-            this.printPageMenuItem.Size = new System.Drawing.Size(337, 44);
+            this.printPageMenuItem.Size = new System.Drawing.Size(427, 44);
             this.printPageMenuItem.Text = "Print Page";
             // 
             // ExitMenuItem
             // 
             this.ExitMenuItem.Name = "ExitMenuItem";
-            this.ExitMenuItem.Size = new System.Drawing.Size(337, 44);
+            this.ExitMenuItem.Size = new System.Drawing.Size(427, 44);
             this.ExitMenuItem.Text = "Exit";
             this.ExitMenuItem.Click += new System.EventHandler(this.ExitMenuItem_Click);
             // 
