@@ -11,3 +11,4 @@ C:\Users\SeaMonster\Desktop\CPSC2713-MainProj\WebBrowser\WebBrowser.UI\bin\Debug
 C:\Users\SeaMonster\Desktop\CPSC2713-MainProj\WebBrowser\WebBrowser.UI\obj\Debug\WebBrowser.UI.csproj.CopyComplete
 C:\Users\SeaMonster\Desktop\CPSC2713-MainProj\WebBrowser\WebBrowser.UI\obj\Debug\WebBrowser.UI.exe
 C:\Users\SeaMonster\Desktop\CPSC2713-MainProj\WebBrowser\WebBrowser.UI\obj\Debug\WebBrowser.UI.pdb
+C:\Users\SeaMonster\Desktop\CPSC2713-MainProj\WebBrowser\WebBrowser.UI\obj\Debug\WebBrowser.UI.NewTabUserControl.resources

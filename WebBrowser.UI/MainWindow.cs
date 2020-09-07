@@ -16,6 +16,7 @@ namespace WebBrowser.UI
         {
             InitializeComponent();
         }
+
         //Menu Items
         private void ExitMenuItem_Click(object sender, EventArgs e)
         {
@@ -29,30 +30,8 @@ namespace WebBrowser.UI
                 "\n" + "I am very excited about creating this and cant wait to explore more of Win. Forms!");
 
         }
+
         
-        //ToolStrip
-
-        //address bar
-        private void txtBoxAddress_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                string url = txtBoxAddress.Text;
-
-                if (Uri.IsWellFormedUriString(url, UriKind.RelativeOrAbsolute))
-                {
-                    tabPage1.Text = url;
-                    webBrowser1.Navigate(url);
-                }
-            }
-        }
-    
-        //Go Button
-        private void btnGo_Click(object sender, EventArgs e)
-        {
-            string url = txtBoxAddress.Text;
-            webBrowser1.Navigate(url);
-        }
     }
 }
 
