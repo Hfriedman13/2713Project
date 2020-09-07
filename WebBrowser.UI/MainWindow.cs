@@ -33,20 +33,14 @@ namespace WebBrowser.UI
 
         private void newTabMenuItem_Click(object sender, EventArgs e)
         {
-            
-            
+ 
                 string title = "TabPage " + (tabPage.TabCount + 1).ToString();
                 TabPage myTabPage = new TabPage(title);
                 tabPage.TabPages.Add(myTabPage);
 
-
-
                 myTabPage.Controls.Add(new NewTabUserControl());
                 NewTabUserControl.Instance.Dock = DockStyle.Fill;
                 NewTabUserControl.Instance.BringToFront();
-            
-            
-            
         }
     
 

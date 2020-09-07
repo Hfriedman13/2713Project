@@ -1,9 +1,9 @@
 C:\Users\SeaMonster\Desktop\CPSC2713-MainProj\WebBrowser\WebBrowser.Data\bin\Debug\netstandard2.0\WebBrowser.Data.deps.json
 C:\Users\SeaMonster\Desktop\CPSC2713-MainProj\WebBrowser\WebBrowser.Data\bin\Debug\netstandard2.0\WebBrowser.Data.dll
 C:\Users\SeaMonster\Desktop\CPSC2713-MainProj\WebBrowser\WebBrowser.Data\bin\Debug\netstandard2.0\WebBrowser.Data.pdb
+C:\Users\SeaMonster\Desktop\CPSC2713-MainProj\WebBrowser\WebBrowser.Data\obj\Debug\netstandard2.0\WebBrowser.Data.csprojAssemblyReference.cache
 C:\Users\SeaMonster\Desktop\CPSC2713-MainProj\WebBrowser\WebBrowser.Data\obj\Debug\netstandard2.0\WebBrowser.Data.AssemblyInfoInputs.cache
 C:\Users\SeaMonster\Desktop\CPSC2713-MainProj\WebBrowser\WebBrowser.Data\obj\Debug\netstandard2.0\WebBrowser.Data.AssemblyInfo.cs
 C:\Users\SeaMonster\Desktop\CPSC2713-MainProj\WebBrowser\WebBrowser.Data\obj\Debug\netstandard2.0\WebBrowser.Data.csproj.CoreCompileInputs.cache
 C:\Users\SeaMonster\Desktop\CPSC2713-MainProj\WebBrowser\WebBrowser.Data\obj\Debug\netstandard2.0\WebBrowser.Data.dll
 C:\Users\SeaMonster\Desktop\CPSC2713-MainProj\WebBrowser\WebBrowser.Data\obj\Debug\netstandard2.0\WebBrowser.Data.pdb
-C:\Users\SeaMonster\Desktop\CPSC2713-MainProj\WebBrowser\WebBrowser.Data\obj\Debug\netstandard2.0\WebBrowser.Data.csprojAssemblyReference.cache

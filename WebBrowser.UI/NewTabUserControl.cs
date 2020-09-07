@@ -37,8 +37,8 @@ namespace WebBrowser.UI
         //Back Button 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(backLinks.ToString());
-
+            //MessageBox.Show(backLinks.ToString());
+            
             try
             {
                 string url = txtBoxAddressbar.Text;
@@ -46,6 +46,7 @@ namespace WebBrowser.UI
 
                 string newUrl = backLinks.Pop();
                 webBrowser1.Navigate(newUrl);
+                txtBoxAddressbar.Text = newUrl;
             }
             catch(ArgumentException)
             {
@@ -64,6 +65,7 @@ namespace WebBrowser.UI
 
                 string newUrl = forwardLinks.Pop();
                 webBrowser1.Navigate(newUrl);
+                txtBoxAddressbar.Text = newUrl;
             }
             catch(NullReferenceException)
             {
@@ -91,6 +93,12 @@ namespace WebBrowser.UI
                     txtBoxAddressbar.Text = url;
                     webBrowser1.Navigate(url);
                     webBrowser1.ScriptErrorsSuppressed = true;
+                    
+                    //adds url to stack
+                    backLinks.Push(url);
+                    forwardLinks.Push(url);
+
+                    
                 }
             }
         }
@@ -99,26 +107,13 @@ namespace WebBrowser.UI
         {
             string url = txtBoxAddressbar.Text;
             webBrowser1.Navigate(url);
-        }
 
-        //Backlinks Field 
-        public void addBackLink()
-        {
-            string url = txtBoxAddressbar.Text;
+            //adds url to stacks 
             backLinks.Push(url);
+            forwardLinks.Push(url);
         }
 
-
-       //ForwardLinks Field
-        public void addForwardLink()
-        {
-            if(txtBoxAddressbar.Text != null)
-            {
-
-                forwardLinks.Push(txtBoxAddressbar.Text);
-            }
-
-        }
+       
         
        
        
