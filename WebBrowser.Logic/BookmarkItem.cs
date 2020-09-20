@@ -6,5 +6,7 @@ namespace WebBrowser.Logic
 {
     class BookmarkItem
     {
+        public String URL;
+        public String Title;
     }
 }
