@@ -34,5 +34,17 @@ namespace WebBrowser.UI.Properties {
                 return ((string)(this["HistoryConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\SeaMonster\\Desktop\\C" +
+            "PSC2713-MainProj\\WebBrowser\\WebBrowser.Data\\Bookmark.mdf;Integrated Security=Tru" +
+            "e")]
+        public string BookmarkConnectionString {
+            get {
+                return ((string)(this["BookmarkConnectionString"]));
+            }
+        }
     }
 }
