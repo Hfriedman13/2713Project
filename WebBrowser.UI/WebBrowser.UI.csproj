@@ -61,6 +61,11 @@
     <Compile Include="BookmarkManagerForm.Designer.cs">
       <DependentUpon>BookmarkManagerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="BrowserDatabaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BrowserDatabaseDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="HistoryDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -117,6 +122,17 @@
     </None>
     <None Include="BookmarkDataSet.xss">
       <DependentUpon>BookmarkDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BrowserDatabaseDataSet.xsc">
+      <DependentUpon>BrowserDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BrowserDatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BrowserDatabaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BrowserDatabaseDataSet.xss">
+      <DependentUpon>BrowserDatabaseDataSet.xsd</DependentUpon>
     </None>
     <None Include="HistoryDataSet.xsc">
       <DependentUpon>HistoryDataSet.xsd</DependentUpon>

@@ -50,12 +50,25 @@
             this.tableAdapterManager1 = new WebBrowser.UI.BookmarkDataSetTableAdapters.TableAdapterManager();
             this.browserHistoryTableAdapter = new WebBrowser.UI.HistoryDataSetTableAdapters.browserHistoryTableAdapter();
             this.tableAdapterManager = new WebBrowser.UI.HistoryDataSetTableAdapters.TableAdapterManager();
+            this.browserDatabaseDataSet = new WebBrowser.UI.BrowserDatabaseDataSet();
+            this.browserHistoryBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.browserHistoryTableAdapter1 = new WebBrowser.UI.BrowserDatabaseDataSetTableAdapters.browserHistoryTableAdapter();
+            this.tableAdapterManager2 = new WebBrowser.UI.BrowserDatabaseDataSetTableAdapters.TableAdapterManager();
+            this.browserHistoryDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.tabPage.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.browserHistoryBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.historyDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookmarkDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.browserBookmarkBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.browserDatabaseDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.browserHistoryBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.browserHistoryDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -159,6 +172,7 @@
             // tabPage1
             // 
             this.tabPage1.AutoScroll = true;
+            this.tabPage1.Controls.Add(this.browserHistoryDataGridView);
             this.tabPage1.Location = new System.Drawing.Point(8, 39);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -207,6 +221,78 @@
             this.tableAdapterManager.browserHistoryTableAdapter = this.browserHistoryTableAdapter;
             this.tableAdapterManager.UpdateOrder = WebBrowser.UI.HistoryDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // browserDatabaseDataSet
+            // 
+            this.browserDatabaseDataSet.DataSetName = "BrowserDatabaseDataSet";
+            this.browserDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // browserHistoryBindingSource1
+            // 
+            this.browserHistoryBindingSource1.DataMember = "browserHistory";
+            this.browserHistoryBindingSource1.DataSource = this.browserDatabaseDataSet;
+            // 
+            // browserHistoryTableAdapter1
+            // 
+            this.browserHistoryTableAdapter1.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager2
+            // 
+            this.tableAdapterManager2.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager2.browserBookmarksTableAdapter = null;
+            this.tableAdapterManager2.browserHistoryTableAdapter = this.browserHistoryTableAdapter1;
+            this.tableAdapterManager2.UpdateOrder = WebBrowser.UI.BrowserDatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // browserHistoryDataGridView
+            // 
+            this.browserHistoryDataGridView.AutoGenerateColumns = false;
+            this.browserHistoryDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.browserHistoryDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4});
+            this.browserHistoryDataGridView.DataSource = this.browserHistoryBindingSource1;
+            this.browserHistoryDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.browserHistoryDataGridView.Location = new System.Drawing.Point(3, 3);
+            this.browserHistoryDataGridView.Name = "browserHistoryDataGridView";
+            this.browserHistoryDataGridView.RowHeadersWidth = 82;
+            this.browserHistoryDataGridView.RowTemplate.Height = 33;
+            this.browserHistoryDataGridView.Size = new System.Drawing.Size(1831, 923);
+            this.browserHistoryDataGridView.TabIndex = 0;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 10;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "URL";
+            this.dataGridViewTextBoxColumn2.HeaderText = "URL";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 10;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Title";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Title";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 10;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Date";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Date";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 10;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 200;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -217,13 +303,18 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainWindow";
             this.Text = "MainWindow";
+            this.Load += new System.EventHandler(this.MainWindow_Load_1);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tabPage.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.browserHistoryBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.historyDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookmarkDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.browserBookmarkBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.browserDatabaseDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.browserHistoryBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.browserHistoryDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -253,5 +344,14 @@
         private System.Windows.Forms.BindingSource browserBookmarkBindingSource;
         private BookmarkDataSetTableAdapters.browserBookmarkTableAdapter browserBookmarkTableAdapter;
         private BookmarkDataSetTableAdapters.TableAdapterManager tableAdapterManager1;
+        private BrowserDatabaseDataSet browserDatabaseDataSet;
+        private System.Windows.Forms.BindingSource browserHistoryBindingSource1;
+        private BrowserDatabaseDataSetTableAdapters.browserHistoryTableAdapter browserHistoryTableAdapter1;
+        private BrowserDatabaseDataSetTableAdapters.TableAdapterManager tableAdapterManager2;
+        private System.Windows.Forms.DataGridView browserHistoryDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
     }
 }
