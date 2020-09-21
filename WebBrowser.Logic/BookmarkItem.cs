@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.Text;
 
+
+
 namespace WebBrowser.Logic
 {
-    class BookmarkItem
+    public class BookmarkItem
     {
-        public String URL;
-        public String Title;
+        public String URL { get; set; }
+        public String Title { get; set; }
+        public int ID { get; set; }
     }
 }

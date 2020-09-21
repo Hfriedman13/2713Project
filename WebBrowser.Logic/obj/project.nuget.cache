@@ -1,11 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "u4J8YKamg5xAz9C9R8ZAJ5v4Tlx5ir65AVOEuaQgI4G1TwunsZViTtz3aq3Hz8W8hMmt5FqxOfcmC+t+twZJVQ==",
+  "dgSpecHash": "A+P/MPvBJFOCoOI9b5X1GhBTQCb7ScqrWQvx4cbrLewEnhFO19JyCYH9/rRNpD265ruUy++8WObG3W915/y+YQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\SeaMonster\\Desktop\\CPSC2713-MainProj\\WebBrowser\\WebBrowser.Logic\\WebBrowser.Logic.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\SeaMonster\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\SeaMonster\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\SeaMonster\\.nuget\\packages\\system.data.datasetextensions\\4.5.0\\system.data.datasetextensions.4.5.0.nupkg.sha512"
   ],
   "logs": []
 }

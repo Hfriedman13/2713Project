@@ -1,0 +1,3 @@
+C:\Users\SeaMonster\Desktop\CPSC2713-MainProj\WebBrowser\WebBrowser.Data\obj\Debug\net46\WebBrowser.Data.AssemblyInfoInputs.cache
+C:\Users\SeaMonster\Desktop\CPSC2713-MainProj\WebBrowser\WebBrowser.Data\obj\Debug\net46\WebBrowser.Data.AssemblyInfo.cs
+C:\Users\SeaMonster\Desktop\CPSC2713-MainProj\WebBrowser\WebBrowser.Data\obj\Debug\net46\WebBrowser.Data.csproj.CoreCompileInputs.cache

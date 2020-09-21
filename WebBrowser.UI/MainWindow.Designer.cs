@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newTabMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,10 +42,20 @@
             this.HelpMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.newTabUserControl1 = new WebBrowser.UI.NewTabUserControl();
+            this.browserHistoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.historyDataSet = new WebBrowser.UI.HistoryDataSet();
+            this.bookmarkDataSet = new WebBrowser.UI.BookmarkDataSet();
+            this.browserBookmarkBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.browserBookmarkTableAdapter = new WebBrowser.UI.BookmarkDataSetTableAdapters.browserBookmarkTableAdapter();
+            this.tableAdapterManager1 = new WebBrowser.UI.BookmarkDataSetTableAdapters.TableAdapterManager();
+            this.browserHistoryTableAdapter = new WebBrowser.UI.HistoryDataSetTableAdapters.browserHistoryTableAdapter();
+            this.tableAdapterManager = new WebBrowser.UI.HistoryDataSetTableAdapters.TableAdapterManager();
             this.menuStrip1.SuspendLayout();
             this.tabPage.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.browserHistoryBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.historyDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookmarkDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.browserBookmarkBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -57,7 +68,7 @@
             this.HelpMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1865, 42);
+            this.menuStrip1.Size = new System.Drawing.Size(1865, 40);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -70,7 +81,7 @@
             this.printPageMenuItem,
             this.ExitMenuItem});
             this.fileMenuItem.Name = "fileMenuItem";
-            this.fileMenuItem.Size = new System.Drawing.Size(72, 38);
+            this.fileMenuItem.Size = new System.Drawing.Size(72, 36);
             this.fileMenuItem.Text = "File";
             // 
             // newTabMenuItem
@@ -79,7 +90,7 @@
             this.newTabMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
             this.newTabMenuItem.Size = new System.Drawing.Size(427, 44);
             this.newTabMenuItem.Text = "New Tab";
-            this.newTabMenuItem.Click += new System.EventHandler(this.newTabMenuItem_Click);
+            this.newTabMenuItem.Click += new System.EventHandler(this.NewTabMenuItem_Click);
             // 
             // closeCurrentTabMenuItem
             // 
@@ -87,7 +98,7 @@
             this.closeCurrentTabMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.W)));
             this.closeCurrentTabMenuItem.Size = new System.Drawing.Size(427, 44);
             this.closeCurrentTabMenuItem.Text = "Close Current Tab";
-            this.closeCurrentTabMenuItem.Click += new System.EventHandler(this.closeCurrentTabMenuItem_Click);
+            this.closeCurrentTabMenuItem.Click += new System.EventHandler(this.CloseCurrentTabMenuItem_Click);
             // 
             // saveAsHTMLMenuItem
             // 
@@ -114,7 +125,7 @@
             this.manageHistoryMenuItem,
             this.manageBookmarksMenuItem});
             this.toolsMenuItem.Name = "toolsMenuItem";
-            this.toolsMenuItem.Size = new System.Drawing.Size(90, 38);
+            this.toolsMenuItem.Size = new System.Drawing.Size(90, 36);
             this.toolsMenuItem.Text = "Tools";
             // 
             // manageHistoryMenuItem
@@ -132,22 +143,22 @@
             // HelpMenuItem
             // 
             this.HelpMenuItem.Name = "HelpMenuItem";
-            this.HelpMenuItem.Size = new System.Drawing.Size(85, 38);
+            this.HelpMenuItem.Size = new System.Drawing.Size(85, 36);
             this.HelpMenuItem.Text = "Help";
             this.HelpMenuItem.Click += new System.EventHandler(this.HelpMenuItem_Click);
             // 
-            // tabControl1
+            // tabPage
             // 
             this.tabPage.Controls.Add(this.tabPage1);
-            this.tabPage.Location = new System.Drawing.Point(0, 88);
-            this.tabPage.Name = "tabControl1";
+            this.tabPage.Location = new System.Drawing.Point(0, 43);
+            this.tabPage.Name = "tabPage";
             this.tabPage.SelectedIndex = 0;
             this.tabPage.Size = new System.Drawing.Size(1853, 976);
             this.tabPage.TabIndex = 2;
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.newTabUserControl1);
+            this.tabPage1.AutoScroll = true;
             this.tabPage1.Location = new System.Drawing.Point(8, 39);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -156,12 +167,45 @@
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // newTabUserControl1
+            // browserHistoryBindingSource
             // 
-            this.newTabUserControl1.Location = new System.Drawing.Point(0, 3);
-            this.newTabUserControl1.Name = "newTabUserControl1";
-            this.newTabUserControl1.Size = new System.Drawing.Size(1837, 926);
-            this.newTabUserControl1.TabIndex = 0;
+            this.browserHistoryBindingSource.DataMember = "browserHistory";
+            this.browserHistoryBindingSource.DataSource = this.historyDataSet;
+            // 
+            // historyDataSet
+            // 
+            this.historyDataSet.DataSetName = "HistoryDataSet";
+            this.historyDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bookmarkDataSet
+            // 
+            this.bookmarkDataSet.DataSetName = "BookmarkDataSet";
+            this.bookmarkDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // browserBookmarkBindingSource
+            // 
+            this.browserBookmarkBindingSource.DataMember = "browserBookmark";
+            this.browserBookmarkBindingSource.DataSource = this.bookmarkDataSet;
+            // 
+            // browserBookmarkTableAdapter
+            // 
+            this.browserBookmarkTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager1
+            // 
+            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager1.browserBookmarkTableAdapter = this.browserBookmarkTableAdapter;
+            this.tableAdapterManager1.UpdateOrder = WebBrowser.UI.BookmarkDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // browserHistoryTableAdapter
+            // 
+            this.browserHistoryTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.browserHistoryTableAdapter = this.browserHistoryTableAdapter;
+            this.tableAdapterManager.UpdateOrder = WebBrowser.UI.HistoryDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // MainWindow
             // 
@@ -176,7 +220,10 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tabPage.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.browserHistoryBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.historyDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookmarkDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.browserBookmarkBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -198,5 +245,13 @@
         private System.Windows.Forms.TabPage tabPage1;
         private NewTabUserControl newTabUserControl1;
         public System.Windows.Forms.TabControl tabPage;
+        private HistoryDataSet historyDataSet;
+        private System.Windows.Forms.BindingSource browserHistoryBindingSource;
+        private HistoryDataSetTableAdapters.browserHistoryTableAdapter browserHistoryTableAdapter;
+        private HistoryDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private BookmarkDataSet bookmarkDataSet;
+        private System.Windows.Forms.BindingSource browserBookmarkBindingSource;
+        private BookmarkDataSetTableAdapters.browserBookmarkTableAdapter browserBookmarkTableAdapter;
+        private BookmarkDataSetTableAdapters.TableAdapterManager tableAdapterManager1;
     }
 }

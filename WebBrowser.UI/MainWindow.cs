@@ -31,7 +31,7 @@ namespace WebBrowser.UI
 
         }
 
-        private void newTabMenuItem_Click(object sender, EventArgs e)
+        private void NewTabMenuItem_Click(object sender, EventArgs e)
         {
  
                 string title = "TabPage " + (tabPage.TabCount + 1).ToString();
@@ -44,11 +44,13 @@ namespace WebBrowser.UI
         }
     
 
-        private void closeCurrentTabMenuItem_Click(object sender, EventArgs e)
+        private void CloseCurrentTabMenuItem_Click(object sender, EventArgs e)
         {
             // Removes the selected tab:  
             tabPage.TabPages.Remove(tabPage.SelectedTab); 
         }
+
+        
 
     }
 }

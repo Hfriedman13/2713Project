@@ -113,9 +113,12 @@ namespace WebBrowser.UI
             forwardLinks.Push(url);
         }
 
-       
-        
-       
-       
+        //A Bookmark button: when clicked, the URL and Title of the current page will be added to 
+        //the Bookmark table in the database if it does not already exist (use the Bookmark Manager 
+        //to add the new bookmark to the database)
+        private void btnBookmark_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

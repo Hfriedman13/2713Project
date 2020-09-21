@@ -1,11 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LUXusI3POOs777Lqss6aLYzAwlGfnGLXvvGhZvfIwFf4SKGRg3KQaUBF0uAF0InumTz4MgcpT9q8qZdUr1/P6A==",
+  "dgSpecHash": "MMaJZS47DjAWjs7M/S+DaEsnAUCH2WyXFnssl3mHFNHWNl+rVlCSkHQFPZGHhpbIhCMVAGL9MLCbQ2Mi26WBUg==",
   "success": true,
   "projectFilePath": "C:\\Users\\SeaMonster\\Desktop\\CPSC2713-MainProj\\WebBrowser\\WebBrowser.Data\\WebBrowser.Data.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\SeaMonster\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\SeaMonster\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }

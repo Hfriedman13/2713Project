@@ -1,0 +1,7 @@
+C:\Users\SeaMonster\Desktop\CPSC2713-MainProj\WebBrowser\WebBrowser.Data\bin\Debug\net472\WebBrowser.Data.dll
+C:\Users\SeaMonster\Desktop\CPSC2713-MainProj\WebBrowser\WebBrowser.Data\bin\Debug\net472\WebBrowser.Data.pdb
+C:\Users\SeaMonster\Desktop\CPSC2713-MainProj\WebBrowser\WebBrowser.Data\obj\Debug\net472\WebBrowser.Data.AssemblyInfoInputs.cache
+C:\Users\SeaMonster\Desktop\CPSC2713-MainProj\WebBrowser\WebBrowser.Data\obj\Debug\net472\WebBrowser.Data.AssemblyInfo.cs
+C:\Users\SeaMonster\Desktop\CPSC2713-MainProj\WebBrowser\WebBrowser.Data\obj\Debug\net472\WebBrowser.Data.csproj.CoreCompileInputs.cache
+C:\Users\SeaMonster\Desktop\CPSC2713-MainProj\WebBrowser\WebBrowser.Data\obj\Debug\net472\WebBrowser.Data.dll
+C:\Users\SeaMonster\Desktop\CPSC2713-MainProj\WebBrowser\WebBrowser.Data\obj\Debug\net472\WebBrowser.Data.pdb

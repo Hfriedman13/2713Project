@@ -122,6 +122,7 @@
             this.btnBookmark.Name = "btnBookmark";
             this.btnBookmark.Size = new System.Drawing.Size(46, 37);
             this.btnBookmark.Text = "Bookmark";
+            this.btnBookmark.Click += new System.EventHandler(this.btnBookmark_Click);
             // 
             // webBrowser1
             // 
