@@ -66,7 +66,7 @@
             this.HelpMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1865, 40);
+            this.menuStrip1.Size = new System.Drawing.Size(1865, 42);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -79,7 +79,7 @@
             this.printPageMenuItem,
             this.ExitMenuItem});
             this.fileMenuItem.Name = "fileMenuItem";
-            this.fileMenuItem.Size = new System.Drawing.Size(72, 36);
+            this.fileMenuItem.Size = new System.Drawing.Size(72, 38);
             this.fileMenuItem.Text = "File";
             // 
             // newTabMenuItem
@@ -123,7 +123,7 @@
             this.manageHistoryMenuItem,
             this.manageBookmarksMenuItem});
             this.toolsMenuItem.Name = "toolsMenuItem";
-            this.toolsMenuItem.Size = new System.Drawing.Size(90, 36);
+            this.toolsMenuItem.Size = new System.Drawing.Size(90, 38);
             this.toolsMenuItem.Text = "Tools";
             // 
             // manageHistoryMenuItem
@@ -131,17 +131,19 @@
             this.manageHistoryMenuItem.Name = "manageHistoryMenuItem";
             this.manageHistoryMenuItem.Size = new System.Drawing.Size(360, 44);
             this.manageHistoryMenuItem.Text = "Manage History";
+            this.manageHistoryMenuItem.Click += new System.EventHandler(this.manageHistoryMenuItem_Click);
             // 
             // manageBookmarksMenuItem
             // 
             this.manageBookmarksMenuItem.Name = "manageBookmarksMenuItem";
             this.manageBookmarksMenuItem.Size = new System.Drawing.Size(360, 44);
             this.manageBookmarksMenuItem.Text = "Manage Bookmarks";
+            this.manageBookmarksMenuItem.Click += new System.EventHandler(this.manageBookmarksMenuItem_Click);
             // 
             // HelpMenuItem
             // 
             this.HelpMenuItem.Name = "HelpMenuItem";
-            this.HelpMenuItem.Size = new System.Drawing.Size(85, 36);
+            this.HelpMenuItem.Size = new System.Drawing.Size(85, 38);
             this.HelpMenuItem.Text = "Help";
             this.HelpMenuItem.Click += new System.EventHandler(this.HelpMenuItem_Click);
             // 

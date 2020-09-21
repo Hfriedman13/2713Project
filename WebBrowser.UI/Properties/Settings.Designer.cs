@@ -26,9 +26,8 @@ namespace WebBrowser.UI.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\SeaMonster\\Desktop\\C" +
-            "PSC2713-MainProj\\WebBrowser\\WebBrowser.Data\\History.mdf;Integrated Security=True" +
-            "")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\BrowserDataba" +
+            "se.mdf;Integrated Security=True")]
         public string HistoryConnectionString {
             get {
                 return ((string)(this["HistoryConnectionString"]));
@@ -38,9 +37,8 @@ namespace WebBrowser.UI.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\SeaMonster\\Desktop\\C" +
-            "PSC2713-MainProj\\WebBrowser\\WebBrowser.Data\\Bookmark.mdf;Integrated Security=Tru" +
-            "e")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\BrowserDataba" +
+            "se.mdf;Integrated Security=True")]
         public string BookmarkConnectionString {
             get {
                 return ((string)(this["BookmarkConnectionString"]));
@@ -50,9 +48,8 @@ namespace WebBrowser.UI.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\SeaMonster\\Desktop\\C" +
-            "PSC2713-MainProj\\WebBrowser\\WebBrowser.Data\\BrowserDatabase.mdf;Integrated Secur" +
-            "ity=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\BrowserDataba" +
+            "se.mdf;Integrated Security=True")]
         public string BrowserDatabaseConnectionString {
             get {
                 return ((string)(this["BrowserDatabaseConnectionString"]));

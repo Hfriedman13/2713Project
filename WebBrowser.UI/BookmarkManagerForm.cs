@@ -26,6 +26,7 @@ namespace WebBrowser.UI
             foreach (var item in items)
             {
                 lbBookmark.Items.Add(string.Format("{1} - {0}", item.Title, item.URL));
+               
             }
         }
     }

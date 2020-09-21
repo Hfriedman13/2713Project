@@ -9,10 +9,12 @@ namespace WebBrowser.Logic
 {
     public class BookmarkManager
     {
-        public static void AddItem(BookmarkItem item)
+        public static void AddItem(string url, string title)
         {
+            
             var adapter = new browserBookmarksTableAdapter();
-            adapter.Insert(item.URL, item.Title);
+            //adapter.Insert(item.URL, item.Title);
+            adapter.Insert(url, title);
         }
 
      

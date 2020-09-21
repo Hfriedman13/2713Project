@@ -63,8 +63,20 @@ namespace WebBrowser.UI
         private void MainWindow_Load_1(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'browserDatabaseDataSet.browserHistory' table. You can move, or remove it, as needed.
-            this.browserHistoryTableAdapter1.Fill(this.browserDatabaseDataSet.browserHistory);
+            //this.browserHistoryTableAdapter1.Fill(this.browserDatabaseDataSet.browserHistory);
+          
+        }
 
+        private void manageHistoryMenuItem_Click(object sender, EventArgs e)
+        {
+            var HistoryForm = new HistoryManagerForm();
+            HistoryForm.ShowDialog();
+        }
+
+        private void manageBookmarksMenuItem_Click(object sender, EventArgs e)
+        {
+            var BookmarkForm = new BookmarkManagerForm();
+            BookmarkForm.ShowDialog();
         }
     }
 }

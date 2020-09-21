@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Security.Policy;
+using WebBrowser.Logic;
+using WebBrowser.UI.BrowserDatabaseDataSetTableAdapters;
 
 namespace WebBrowser.UI
 {
@@ -107,10 +109,14 @@ namespace WebBrowser.UI
         {
             string url = txtBoxAddressbar.Text;
             webBrowser1.Navigate(url);
+            webBrowser1.ScriptErrorsSuppressed = true;
 
             //adds url to stacks 
             backLinks.Push(url);
             forwardLinks.Push(url);
+
+            //add url to history?? 
+
         }
 
         //A Bookmark button: when clicked, the URL and Title of the current page will be added to 
@@ -118,6 +124,14 @@ namespace WebBrowser.UI
         //to add the new bookmark to the database)
         private void btnBookmark_Click(object sender, EventArgs e)
         {
+            
+                string url = txtBoxAddressbar.Text;
+                string regex = @"(?<=<title.*>)([\s\S]*)(?=</title>)";
+                System.Text.RegularExpressions.Regex ex = new System.Text.RegularExpressions.Regex(regex, System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+                string Title = ex.Match(url).Value.Trim();
+           
+
+                BookmarkManager.AddItem(url, Title);
 
         }
     }
