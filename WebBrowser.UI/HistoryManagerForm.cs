@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WebBrowser.Logic;
-using WebBrowser.UI.HistoryDataSetTableAdapters;
+using WebBrowser.UI.BrowserDatabaseDataSetTableAdapters;
 
 namespace WebBrowser.UI
 {

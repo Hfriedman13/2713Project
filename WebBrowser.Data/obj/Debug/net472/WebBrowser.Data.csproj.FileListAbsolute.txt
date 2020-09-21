@@ -5,4 +5,3 @@ C:\Users\SeaMonster\Desktop\CPSC2713-MainProj\WebBrowser\WebBrowser.Data\obj\Deb
 C:\Users\SeaMonster\Desktop\CPSC2713-MainProj\WebBrowser\WebBrowser.Data\obj\Debug\net472\WebBrowser.Data.csproj.CoreCompileInputs.cache
 C:\Users\SeaMonster\Desktop\CPSC2713-MainProj\WebBrowser\WebBrowser.Data\obj\Debug\net472\WebBrowser.Data.dll
 C:\Users\SeaMonster\Desktop\CPSC2713-MainProj\WebBrowser\WebBrowser.Data\obj\Debug\net472\WebBrowser.Data.pdb
-C:\Users\SeaMonster\Desktop\CPSC2713-MainProj\WebBrowser\WebBrowser.Data\obj\Debug\net472\WebBrowser.Data.csprojAssemblyReference.cache

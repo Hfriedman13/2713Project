@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
-
+using WebBrowser.Data.BookmarkDataSetTableAdapters;
 
 namespace WebBrowser.Logic
 {
@@ -11,14 +11,14 @@ namespace WebBrowser.Logic
     {
         public static void AddItem(BookmarkItem item)
         {
-            var adapter = new browserBookmarkTableAdapter();
+            var adapter = new browserBookmarksTableAdapter();
             adapter.Insert(item.URL, item.Title);
         }
 
      
         public static List<BookmarkItem> GetItems()
         {
-            var adapter = new browserBookmarkTableAdapter();
+            var adapter = new browserBookmarksTableAdapter();
             var results = new List<BookmarkItem>();
             var rows = adapter.GetData();
 
