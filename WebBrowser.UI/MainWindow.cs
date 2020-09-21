@@ -50,7 +50,15 @@ namespace WebBrowser.UI
             tabPage.TabPages.Remove(tabPage.SelectedTab); 
         }
 
-        
+        private void MainWindow_Load(object sender, EventArgs e)
+        {
+            string title = "TabPage " + (tabPage.TabCount).ToString();
+            TabPage myTabPage = new TabPage(title);
+
+            myTabPage.Controls.Add(new NewTabUserControl());
+            NewTabUserControl.Instance.Dock = DockStyle.Fill;
+            NewTabUserControl.Instance.BringToFront();
+        }
 
     }
 }

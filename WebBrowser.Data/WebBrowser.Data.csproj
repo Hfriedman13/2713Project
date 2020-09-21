@@ -8,28 +8,4 @@
     <Reference Include="System.Data.DataSetExtensions" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Compile Update="BookmarkDataSet.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>BookmarkDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Update="HistoryDataSet.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>HistoryDataSet.xsd</DependentUpon>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="BookmarkDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BookmarkDataSet.Designer.cs</LastGenOutput>
-    </None>
-    <None Update="HistoryDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>HistoryDataSet.Designer.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-
 </Project>
