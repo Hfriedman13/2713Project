@@ -50,21 +50,16 @@ namespace WebBrowser.UI
             tabPage.TabPages.Remove(tabPage.SelectedTab); 
         }
 
-        private void MainWindow_Load(object sender, EventArgs e)
-        {
-            string title = "TabPage " + (tabPage.TabCount).ToString();
-            TabPage myTabPage = new TabPage(title);
-
-            myTabPage.Controls.Add(new NewTabUserControl());
-            NewTabUserControl.Instance.Dock = DockStyle.Fill;
-            NewTabUserControl.Instance.BringToFront();
-        }
 
         private void MainWindow_Load_1(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'browserDatabaseDataSet.browserHistory' table. You can move, or remove it, as needed.
-            //this.browserHistoryTableAdapter1.Fill(this.browserDatabaseDataSet.browserHistory);
-          
+            string title = "TabPage ";
+            // + (tabPage.TabCount).ToString();
+            TabPage myTabPage = new TabPage(title);
+
+            tabPage1.Controls.Add(new NewTabUserControl());
+            NewTabUserControl.Instance.Dock = DockStyle.Fill;
+            NewTabUserControl.Instance.BringToFront();
         }
 
         private void manageHistoryMenuItem_Click(object sender, EventArgs e)
@@ -77,6 +72,11 @@ namespace WebBrowser.UI
         {
             var BookmarkForm = new BookmarkManagerForm();
             BookmarkForm.ShowDialog();
+        }
+
+        private void tabPage1_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

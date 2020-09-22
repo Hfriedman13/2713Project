@@ -66,7 +66,7 @@
             this.HelpMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1865, 42);
+            this.menuStrip1.Size = new System.Drawing.Size(1865, 48);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -79,7 +79,7 @@
             this.printPageMenuItem,
             this.ExitMenuItem});
             this.fileMenuItem.Name = "fileMenuItem";
-            this.fileMenuItem.Size = new System.Drawing.Size(72, 38);
+            this.fileMenuItem.Size = new System.Drawing.Size(72, 36);
             this.fileMenuItem.Text = "File";
             // 
             // newTabMenuItem
@@ -123,7 +123,7 @@
             this.manageHistoryMenuItem,
             this.manageBookmarksMenuItem});
             this.toolsMenuItem.Name = "toolsMenuItem";
-            this.toolsMenuItem.Size = new System.Drawing.Size(90, 38);
+            this.toolsMenuItem.Size = new System.Drawing.Size(90, 36);
             this.toolsMenuItem.Text = "Tools";
             // 
             // manageHistoryMenuItem
@@ -143,7 +143,7 @@
             // HelpMenuItem
             // 
             this.HelpMenuItem.Name = "HelpMenuItem";
-            this.HelpMenuItem.Size = new System.Drawing.Size(85, 38);
+            this.HelpMenuItem.Size = new System.Drawing.Size(85, 36);
             this.HelpMenuItem.Text = "Help";
             this.HelpMenuItem.Click += new System.EventHandler(this.HelpMenuItem_Click);
             // 
@@ -164,8 +164,9 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(1837, 929);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Text = "TabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Load);
             // 
             // browserDatabaseDataSet
             // 
