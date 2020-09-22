@@ -13,7 +13,6 @@ namespace WebBrowser.Logic
         {
             
             var adapter = new browserBookmarksTableAdapter();
-            //adapter.Insert(item.URL, item.Title);
             adapter.Insert(url, title);
         }
 

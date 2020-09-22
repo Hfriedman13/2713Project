@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Security.Policy;
 using WebBrowser.Logic;
 using WebBrowser.UI.BrowserDatabaseDataSetTableAdapters;
+using System.Reflection;
 
 namespace WebBrowser.UI
 {
@@ -115,7 +116,21 @@ namespace WebBrowser.UI
             backLinks.Push(url);
             forwardLinks.Push(url);
 
-            //add url to history?? 
+            string[] title = url.Split('.');
+
+            int titleIdx;
+
+            if (title[0].Equals("www"))
+            {
+                titleIdx = 1;
+            }
+            else
+            {
+                titleIdx = 0;
+            }
+
+
+            HistoryManager.AddItem(url, title[titleIdx]);
 
         }
 
@@ -124,14 +139,20 @@ namespace WebBrowser.UI
         //to add the new bookmark to the database)
         private void btnBookmark_Click(object sender, EventArgs e)
         {
-            
-                string url = txtBoxAddressbar.Text;
-                string regex = @"(?<=<title.*>)([\s\S]*)(?=</title>)";
-                System.Text.RegularExpressions.Regex ex = new System.Text.RegularExpressions.Regex(regex, System.Text.RegularExpressions.RegexOptions.IgnoreCase);
-                string Title = ex.Match(url).Value.Trim();
-           
+             string url = txtBoxAddressbar.Text;
+             string[] title = url.Split('.');
+             int titleIdx;
 
-                BookmarkManager.AddItem(url, Title);
+            if (title[0].Equals("www"))
+            {
+                titleIdx = 1;
+            } else
+            {
+                titleIdx = 0;
+            }
+            
+             
+             BookmarkManager.AddItem(url, title[titleIdx]);
 
         }
     }
