@@ -134,9 +134,6 @@ namespace WebBrowser.UI
 
         }
 
-        //A Bookmark button: when clicked, the URL and Title of the current page will be added to 
-        //the Bookmark table in the database if it does not already exist (use the Bookmark Manager 
-        //to add the new bookmark to the database)
         private void btnBookmark_Click(object sender, EventArgs e)
         {
              string url = txtBoxAddressbar.Text;
@@ -151,9 +148,26 @@ namespace WebBrowser.UI
                 titleIdx = 0;
             }
             
+             if (!hasItem(url))
+            {
+                BookmarkManager.AddItem(url, title[titleIdx]);
+            }
              
-             BookmarkManager.AddItem(url, title[titleIdx]);
-
         }
+
+        private bool hasItem(string url)
+        {
+            var bml = BookmarkManager.GetItems();
+           foreach(var i in bml)
+            {
+                if (i.URL.Equals(url))
+                {
+                    MessageBox.Show("Bookmark Already Exists :)");
+                    return true;
+                }
+            }
+            return false;
+        }
+
     }
 }
