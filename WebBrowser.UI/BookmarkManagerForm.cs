@@ -29,5 +29,27 @@ namespace WebBrowser.UI
                
             }
         }
+
+        private void btnSearchBm_Click(object sender, EventArgs e)
+        {
+            var items = BookmarkManager.GetItems();
+
+            foreach (var item in items)
+            {
+                if (item.URL.Contains(tbSearchBm.Text) || item.Title.Contains(tbSearchBm.Text))
+                {
+                    lbBookmark.Items.Add(item);
+                    //not printing out items correctly
+
+                }
+
+            }
+        }
+
+        private void btnDeleteBm_Click(object sender, EventArgs e)
+        {
+            var items = lbBookmark.SelectedItem;
+            lbBookmark.Items.Remove(items);
+        }
     }
 }
