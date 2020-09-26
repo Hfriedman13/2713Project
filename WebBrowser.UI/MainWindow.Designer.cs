@@ -48,6 +48,7 @@
             this.browserHistoryBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.browserHistoryTableAdapter1 = new WebBrowser.UI.BrowserDatabaseDataSetTableAdapters.browserHistoryTableAdapter();
             this.tableAdapterManager2 = new WebBrowser.UI.BrowserDatabaseDataSetTableAdapters.TableAdapterManager();
+            this.clearHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.browserHistoryBindingSource)).BeginInit();
@@ -66,7 +67,7 @@
             this.HelpMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1865, 48);
+            this.menuStrip1.Size = new System.Drawing.Size(1865, 40);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -123,11 +124,13 @@
             this.manageHistoryMenuItem,
             this.manageBookmarksMenuItem});
             this.toolsMenuItem.Name = "toolsMenuItem";
-            this.toolsMenuItem.Size = new System.Drawing.Size(90, 40);
+            this.toolsMenuItem.Size = new System.Drawing.Size(90, 38);
             this.toolsMenuItem.Text = "Tools";
             // 
             // manageHistoryMenuItem
             // 
+            this.manageHistoryMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.clearHistoryToolStripMenuItem});
             this.manageHistoryMenuItem.Name = "manageHistoryMenuItem";
             this.manageHistoryMenuItem.Size = new System.Drawing.Size(360, 44);
             this.manageHistoryMenuItem.Text = "Manage History";
@@ -151,10 +154,10 @@
             // 
             this.tabPage.Controls.Add(this.tabPage1);
             this.tabPage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabPage.Location = new System.Drawing.Point(0, 48);
+            this.tabPage.Location = new System.Drawing.Point(0, 40);
             this.tabPage.Name = "tabPage";
             this.tabPage.SelectedIndex = 0;
-            this.tabPage.Size = new System.Drawing.Size(1865, 1162);
+            this.tabPage.Size = new System.Drawing.Size(1865, 1170);
             this.tabPage.TabIndex = 2;
             // 
             // tabPage1
@@ -163,7 +166,7 @@
             this.tabPage1.Location = new System.Drawing.Point(8, 39);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1849, 1115);
+            this.tabPage1.Size = new System.Drawing.Size(1849, 1123);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "TabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -189,6 +192,13 @@
             this.tableAdapterManager2.browserBookmarksTableAdapter = null;
             this.tableAdapterManager2.browserHistoryTableAdapter = this.browserHistoryTableAdapter1;
             this.tableAdapterManager2.UpdateOrder = WebBrowser.UI.BrowserDatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // clearHistoryToolStripMenuItem
+            // 
+            this.clearHistoryToolStripMenuItem.Name = "clearHistoryToolStripMenuItem";
+            this.clearHistoryToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.clearHistoryToolStripMenuItem.Text = "Clear History";
+            this.clearHistoryToolStripMenuItem.Click += new System.EventHandler(this.clearHistoryToolStripMenuItem_Click);
             // 
             // MainWindow
             // 
@@ -235,5 +245,6 @@
         private System.Windows.Forms.BindingSource browserHistoryBindingSource1;
         private BrowserDatabaseDataSetTableAdapters.browserHistoryTableAdapter browserHistoryTableAdapter1;
         private BrowserDatabaseDataSetTableAdapters.TableAdapterManager tableAdapterManager2;
+        private System.Windows.Forms.ToolStripMenuItem clearHistoryToolStripMenuItem;
     }
 }

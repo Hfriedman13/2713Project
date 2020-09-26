@@ -11,6 +11,7 @@ namespace WebBrowser.Logic
         { 
             var adapter = new browserHistoryTableAdapter();
             adapter.Insert(url, title, DateTime.Now);
+            
         }
 
         public static List<HistoryItem> GetItems()

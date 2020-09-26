@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WebBrowser.UI.BrowserDatabaseDataSetTableAdapters;
 
 namespace WebBrowser.UI
 {
@@ -79,7 +80,17 @@ namespace WebBrowser.UI
             
         }
 
+        private void clearHistoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var adapter = new browserHistoryTableAdapter();
+            var rows = adapter.GetData();
 
+            foreach (var row in rows)
+            {
+                adapter.Delete(row.Id, row.URL, row.Title, row.Date);
+            }
+
+        }
     }
 }
 

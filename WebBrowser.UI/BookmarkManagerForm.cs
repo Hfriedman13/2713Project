@@ -4,10 +4,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WebBrowser.Logic;
+using WebBrowser.UI.BrowserDatabaseDataSetTableAdapters;
 
 namespace WebBrowser.UI
 {
@@ -33,14 +35,15 @@ namespace WebBrowser.UI
         private void btnSearchBm_Click(object sender, EventArgs e)
         {
             var items = BookmarkManager.GetItems();
+            lbBookmark.Items.Clear();
 
             foreach (var item in items)
             {
+
                 if (item.URL.Contains(tbSearchBm.Text) || item.Title.Contains(tbSearchBm.Text))
                 {
-                    lbBookmark.Items.Add(item);
-                    //not printing out items correctly
-
+                    BookmarkManager.AddItem(item.URL, item.Title);
+                    lbBookmark.Items.Add(string.Format("{1} - {0}", item.Title, item.URL));
                 }
 
             }
@@ -50,6 +53,7 @@ namespace WebBrowser.UI
         {
             var items = lbBookmark.SelectedItem;
             lbBookmark.Items.Remove(items);
+            //need to connect database
         }
     }
 }
