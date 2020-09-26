@@ -79,7 +79,7 @@
             this.printPageMenuItem,
             this.ExitMenuItem});
             this.fileMenuItem.Name = "fileMenuItem";
-            this.fileMenuItem.Size = new System.Drawing.Size(72, 44);
+            this.fileMenuItem.Size = new System.Drawing.Size(72, 40);
             this.fileMenuItem.Text = "File";
             // 
             // newTabMenuItem
@@ -123,7 +123,7 @@
             this.manageHistoryMenuItem,
             this.manageBookmarksMenuItem});
             this.toolsMenuItem.Name = "toolsMenuItem";
-            this.toolsMenuItem.Size = new System.Drawing.Size(90, 44);
+            this.toolsMenuItem.Size = new System.Drawing.Size(90, 40);
             this.toolsMenuItem.Text = "Tools";
             // 
             // manageHistoryMenuItem
@@ -143,7 +143,7 @@
             // HelpMenuItem
             // 
             this.HelpMenuItem.Name = "HelpMenuItem";
-            this.HelpMenuItem.Size = new System.Drawing.Size(85, 44);
+            this.HelpMenuItem.Size = new System.Drawing.Size(85, 40);
             this.HelpMenuItem.Text = "Help";
             this.HelpMenuItem.Click += new System.EventHandler(this.HelpMenuItem_Click);
             // 
