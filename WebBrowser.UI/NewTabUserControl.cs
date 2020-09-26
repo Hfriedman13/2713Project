@@ -18,9 +18,7 @@ namespace WebBrowser.UI
     {
         Stack<string> backLinks = new Stack<string>();
         Stack<string> forwardLinks = new Stack<string>();
-
-        bool started = false; 
-
+        
         private static NewTabUserControl _instance;
         public static NewTabUserControl Instance
         {
@@ -184,9 +182,17 @@ namespace WebBrowser.UI
             var curr = (int)e.CurrentProgress;
             progressBar.Maximum = maxP;
             progressBar.Minimum = 0;
+
             if (curr > 0 && curr <= maxP)
             {
                 progressBar.Value = curr;
+                toolStripStatusLabel1.Text = "Loading";
+
+            }
+
+            if (e.CurrentProgress == maxP || e.CurrentProgress == 0) 
+            {
+                toolStripStatusLabel1.Text = "Done";
             }
             
 
