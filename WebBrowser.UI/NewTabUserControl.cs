@@ -18,7 +18,8 @@ namespace WebBrowser.UI
     {
         Stack<string> backLinks = new Stack<string>();
         Stack<string> forwardLinks = new Stack<string>();
-        bool started = false;
+
+        bool started = false; 
 
         private static NewTabUserControl _instance;
         public static NewTabUserControl Instance
@@ -107,11 +108,14 @@ namespace WebBrowser.UI
             }
         }
         //Go Button
-        private void btnGo_Click_1(object sender, EventArgs e)
+        private void btnGo_Click_1(object sender,  EventArgs e)
         {
+
             string url = txtBoxAddressbar.Text;
             webBrowser1.Navigate(url);
             webBrowser1.ScriptErrorsSuppressed = true;
+
+           
 
             //adds url to stacks 
             backLinks.Push(url);
@@ -132,14 +136,12 @@ namespace WebBrowser.UI
 
 
             HistoryManager.AddItem(url, title[titleIdx]);
+          
 
-            if(started)
-            {
-                timer1.Start();
-                ProgressBar.Value = 0; 
-            }
-
+         
         }
+
+      
 
         private void btnBookmark_Click(object sender, EventArgs e)
         {
@@ -176,5 +178,20 @@ namespace WebBrowser.UI
             return false;
         }
 
+        private void webBrowser1_ProgressChanged(object sender, System.Windows.Forms.WebBrowserProgressChangedEventArgs e)
+        {
+            var maxP = (int)e.MaximumProgress;
+            var curr = (int)e.CurrentProgress;
+            progressBar.Maximum = maxP;
+            progressBar.Minimum = 0;
+            if (curr > 0 && curr <= maxP)
+            {
+                progressBar.Value = curr;
+            }
+            
+
+        }
     }
 }
+
+

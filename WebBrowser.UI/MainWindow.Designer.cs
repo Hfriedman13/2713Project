@@ -66,7 +66,7 @@
             this.HelpMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1865, 40);
+            this.menuStrip1.Size = new System.Drawing.Size(1865, 48);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -79,7 +79,7 @@
             this.printPageMenuItem,
             this.ExitMenuItem});
             this.fileMenuItem.Name = "fileMenuItem";
-            this.fileMenuItem.Size = new System.Drawing.Size(72, 36);
+            this.fileMenuItem.Size = new System.Drawing.Size(72, 44);
             this.fileMenuItem.Text = "File";
             // 
             // newTabMenuItem
@@ -123,7 +123,7 @@
             this.manageHistoryMenuItem,
             this.manageBookmarksMenuItem});
             this.toolsMenuItem.Name = "toolsMenuItem";
-            this.toolsMenuItem.Size = new System.Drawing.Size(90, 36);
+            this.toolsMenuItem.Size = new System.Drawing.Size(90, 44);
             this.toolsMenuItem.Text = "Tools";
             // 
             // manageHistoryMenuItem
@@ -143,17 +143,18 @@
             // HelpMenuItem
             // 
             this.HelpMenuItem.Name = "HelpMenuItem";
-            this.HelpMenuItem.Size = new System.Drawing.Size(85, 36);
+            this.HelpMenuItem.Size = new System.Drawing.Size(85, 44);
             this.HelpMenuItem.Text = "Help";
             this.HelpMenuItem.Click += new System.EventHandler(this.HelpMenuItem_Click);
             // 
             // tabPage
             // 
             this.tabPage.Controls.Add(this.tabPage1);
-            this.tabPage.Location = new System.Drawing.Point(0, 43);
+            this.tabPage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabPage.Location = new System.Drawing.Point(0, 48);
             this.tabPage.Name = "tabPage";
             this.tabPage.SelectedIndex = 0;
-            this.tabPage.Size = new System.Drawing.Size(1853, 976);
+            this.tabPage.Size = new System.Drawing.Size(1865, 1162);
             this.tabPage.TabIndex = 2;
             // 
             // tabPage1
@@ -162,7 +163,7 @@
             this.tabPage1.Location = new System.Drawing.Point(8, 39);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1837, 929);
+            this.tabPage1.Size = new System.Drawing.Size(1849, 1115);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "TabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
