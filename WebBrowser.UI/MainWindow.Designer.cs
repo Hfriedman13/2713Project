@@ -48,16 +48,12 @@
             this.browserHistoryBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.browserHistoryTableAdapter1 = new WebBrowser.UI.BrowserDatabaseDataSetTableAdapters.browserHistoryTableAdapter();
             this.tableAdapterManager2 = new WebBrowser.UI.BrowserDatabaseDataSetTableAdapters.TableAdapterManager();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
             this.menuStrip1.SuspendLayout();
             this.tabPage.SuspendLayout();
-            this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.browserHistoryBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.browserBookmarkBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.browserDatabaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.browserHistoryBindingSource1)).BeginInit();
-            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -163,7 +159,6 @@
             // tabPage1
             // 
             this.tabPage1.AutoScroll = true;
-            this.tabPage1.Controls.Add(this.statusStrip1);
             this.tabPage1.Location = new System.Drawing.Point(8, 39);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -194,22 +189,6 @@
             this.tableAdapterManager2.browserHistoryTableAdapter = this.browserHistoryTableAdapter1;
             this.tableAdapterManager2.UpdateOrder = WebBrowser.UI.BrowserDatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // statusStrip1
-            // 
-            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripProgressBar1});
-            this.statusStrip1.Location = new System.Drawing.Point(3, 884);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1831, 42);
-            this.statusStrip1.TabIndex = 0;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // toolStripProgressBar1
-            // 
-            this.toolStripProgressBar1.Name = "toolStripProgressBar1";
-            this.toolStripProgressBar1.Size = new System.Drawing.Size(200, 30);
-            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -224,14 +203,10 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tabPage.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.browserHistoryBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.browserBookmarkBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.browserDatabaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.browserHistoryBindingSource1)).EndInit();
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -259,7 +234,5 @@
         private System.Windows.Forms.BindingSource browserHistoryBindingSource1;
         private BrowserDatabaseDataSetTableAdapters.browserHistoryTableAdapter browserHistoryTableAdapter1;
         private BrowserDatabaseDataSetTableAdapters.TableAdapterManager tableAdapterManager2;
-        private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
     }
 }

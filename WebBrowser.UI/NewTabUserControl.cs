@@ -18,6 +18,7 @@ namespace WebBrowser.UI
     {
         Stack<string> backLinks = new Stack<string>();
         Stack<string> forwardLinks = new Stack<string>();
+        bool started = false;
 
         private static NewTabUserControl _instance;
         public static NewTabUserControl Instance
@@ -131,6 +132,12 @@ namespace WebBrowser.UI
 
 
             HistoryManager.AddItem(url, title[titleIdx]);
+
+            if(started)
+            {
+                timer1.Start();
+                ProgressBar.Value = 0; 
+            }
 
         }
 
