@@ -61,7 +61,6 @@ namespace WebBrowser.UI
                 if (tempRow.Equals(items))
                 {
                     adapter.Delete(row.Id, row.URL, row.Title);
-                    MessageBox.Show("Deleted");
                 }
             }
         }

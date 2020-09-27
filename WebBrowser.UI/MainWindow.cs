@@ -35,7 +35,7 @@ namespace WebBrowser.UI
         private void NewTabMenuItem_Click(object sender, EventArgs e)
         {
  
-                string title = "TabPage " + (tabPage.TabCount + 1).ToString();
+                string title = "TabPage" + (tabPage.TabCount + 1).ToString() + "   ";
                 TabPage myTabPage = new TabPage(title);
                 tabPage.TabPages.Add(myTabPage);
 
@@ -75,11 +75,6 @@ namespace WebBrowser.UI
             BookmarkForm.ShowDialog();
         }
 
-        private void tabPage1_Load(object sender, EventArgs e)
-        {
-            
-        }
-
         private void clearHistoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var adapter = new browserHistoryTableAdapter();
@@ -91,6 +86,7 @@ namespace WebBrowser.UI
             }
 
         }
+
     }
 }
 

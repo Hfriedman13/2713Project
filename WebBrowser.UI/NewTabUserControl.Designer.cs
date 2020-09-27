@@ -60,7 +60,7 @@
             this.btnBookmark});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(1524, 43);
+            this.toolStrip2.Size = new System.Drawing.Size(1949, 43);
             this.toolStrip2.TabIndex = 1;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -136,8 +136,9 @@
             this.webBrowser1.Location = new System.Drawing.Point(0, 43);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(1524, 1082);
+            this.webBrowser1.Size = new System.Drawing.Size(1949, 1298);
             this.webBrowser1.TabIndex = 2;
+           
             this.webBrowser1.ProgressChanged += new System.Windows.Forms.WebBrowserProgressChangedEventHandler(this.webBrowser1_ProgressChanged);
             // 
             // timer1
@@ -150,9 +151,9 @@
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.progressBar,
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 1063);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 1279);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1524, 62);
+            this.statusStrip1.Size = new System.Drawing.Size(1949, 62);
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -176,7 +177,7 @@
             this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.toolStrip2);
             this.Name = "NewTabUserControl";
-            this.Size = new System.Drawing.Size(1524, 1125);
+            this.Size = new System.Drawing.Size(1949, 1341);
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
             this.statusStrip1.ResumeLayout(false);

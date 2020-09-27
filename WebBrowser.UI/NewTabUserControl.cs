@@ -16,6 +16,9 @@ namespace WebBrowser.UI
 {
     public partial class NewTabUserControl : UserControl
     {
+
+        public string tabTitle = ""; 
+
         Stack<string> backLinks = new Stack<string>();
         Stack<string> forwardLinks = new Stack<string>();
         
