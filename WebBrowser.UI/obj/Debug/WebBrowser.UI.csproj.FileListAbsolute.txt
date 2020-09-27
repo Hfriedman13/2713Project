@@ -16,3 +16,9 @@ C:\Users\SeaMonster\Desktop\CPSC2713-MainProj\WebBrowser\WebBrowser.UI\obj\Debug
 C:\Users\SeaMonster\Desktop\CPSC2713-MainProj\WebBrowser\WebBrowser.UI\obj\Debug\WebBrowser.UI.csproj.CopyComplete
 C:\Users\SeaMonster\Desktop\CPSC2713-MainProj\WebBrowser\WebBrowser.UI\obj\Debug\WebBrowser.UI.exe
 C:\Users\SeaMonster\Desktop\CPSC2713-MainProj\WebBrowser\WebBrowser.UI\obj\Debug\WebBrowser.UI.pdb
+C:\Users\SeaMonster\Desktop\CPSC2713-MainProj\WebBrowser\WebBrowser.UI\bin\Debug\WebBrowser.UI.exe.manifest
+C:\Users\SeaMonster\Desktop\CPSC2713-MainProj\WebBrowser\WebBrowser.UI\bin\Debug\WebBrowser.UI.application
+C:\Users\SeaMonster\Desktop\CPSC2713-MainProj\WebBrowser\WebBrowser.UI\obj\Debug\WebBrowser.UI.exe.manifest
+C:\Users\SeaMonster\Desktop\CPSC2713-MainProj\WebBrowser\WebBrowser.UI\obj\Debug\WebBrowser.UI.application
+C:\Users\SeaMonster\Desktop\CPSC2713-MainProj\WebBrowser\WebBrowser.UI\bin\Debug\BrowserDatabase.mdf
+C:\Users\SeaMonster\Desktop\CPSC2713-MainProj\WebBrowser\WebBrowser.UI\bin\Debug\BrowserDatabase_log.ldf
