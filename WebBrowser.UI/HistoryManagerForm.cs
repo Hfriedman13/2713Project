@@ -35,16 +35,15 @@ namespace WebBrowser.UI
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            var items = HistoryManager.GetItems();
+            var adapter = new browserHistoryTableAdapter();
+            var rows = adapter.GetData();
             lbHistory.Items.Clear();
 
-            foreach (var item in items)
+            foreach (var row in rows)
             {
-                
-                if (item.URL.Contains(tbSearch.Text) || item.Title.Contains(tbSearch.Text))
+                if (row.URL.Contains(tbSearch.Text) || row.Title.Contains(tbSearch.Text))
                 { 
-                    HistoryManager.AddItem(item.URL, item.Title);
-                    lbHistory.Items.Add(string.Format("{2} - {1} - {0}", item.Date, item.Title, item.URL));
+                    lbHistory.Items.Add(string.Format("{2} - {1} - {0}", row.Date, row.Title, row.URL));
                 }
  
             }

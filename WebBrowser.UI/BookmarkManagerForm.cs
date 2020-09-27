@@ -34,16 +34,15 @@ namespace WebBrowser.UI
 
         private void btnSearchBm_Click(object sender, EventArgs e)
         {
-            var items = BookmarkManager.GetItems();
+            var adapter = new browserBookmarksTableAdapter();
+            var rows = adapter.GetData();
             lbBookmark.Items.Clear();
 
-            foreach (var item in items)
+            foreach (var row in rows)
             {
-
-                if (item.URL.Contains(tbSearchBm.Text) || item.Title.Contains(tbSearchBm.Text))
+                if (row.URL.Contains(tbSearchBm.Text) || row.Title.Contains(tbSearchBm.Text))
                 {
-                    BookmarkManager.AddItem(item.URL, item.Title);
-                    lbBookmark.Items.Add(string.Format("{1} - {0}", item.Title, item.URL));
+                    lbBookmark.Items.Add(string.Format("{1} - {0}", row.Title, row.URL));
                 }
 
             }
