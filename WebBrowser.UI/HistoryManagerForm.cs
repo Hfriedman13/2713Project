@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom.Compiler;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -64,13 +65,23 @@ namespace WebBrowser.UI
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            
-
-            //needs to save item the was removed
-            var items = lbHistory.SelectedItem;
+            var adapter = new browserHistoryTableAdapter();
+            var rows = adapter.GetData();
+            var items = lbHistory.SelectedItem.ToString();
             lbHistory.Items.Remove(items);
 
-           
+
+            foreach (var row in rows)
+            {
+                var tempRow = string.Format("{2} - {1} - {0}", row.Date, row.Title, row.URL);
+                if (tempRow.Equals(items))
+                {
+                    adapter.Delete(row.Id, row.URL, row.Title, row.Date);
+                    MessageBox.Show("Deleted");
+                }
+            }
+
+
         }
     }
 }

@@ -51,9 +51,20 @@ namespace WebBrowser.UI
 
         private void btnDeleteBm_Click(object sender, EventArgs e)
         {
-            var items = lbBookmark.SelectedItem;
+            var adapter = new browserBookmarksTableAdapter();
+            var rows = adapter.GetData();
+            var items = lbBookmark.SelectedItem.ToString();
             lbBookmark.Items.Remove(items);
-            //need to connect database
+
+            foreach (var row in rows)
+            {
+                var tempRow = string.Format("{1} - {0}",row.Title, row.URL);
+                if (tempRow.Equals(items))
+                {
+                    adapter.Delete(row.Id, row.URL, row.Title);
+                    MessageBox.Show("Deleted");
+                }
+            }
         }
     }
 }
