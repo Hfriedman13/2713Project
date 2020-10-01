@@ -142,8 +142,7 @@ namespace WebBrowser.UI
          
         }
 
-      
-
+      //Bookmark click 
         private void btnBookmark_Click(object sender, EventArgs e)
         {
              string url = txtBoxAddressbar.Text;

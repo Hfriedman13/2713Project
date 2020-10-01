@@ -13,6 +13,7 @@ namespace WebBrowser.UI
 {
     public partial class MainWindow : Form
     {
+
         public MainWindow()
         {
             InitializeComponent();
@@ -31,10 +32,10 @@ namespace WebBrowser.UI
                 "\n" + "I am very excited about creating this and cant wait to explore more of Win. Forms!");
 
         }
-
+        //Creating New Tab
         private void NewTabMenuItem_Click(object sender, EventArgs e)
         {
- 
+                
                 string title = "TabPage" + (tabPage.TabCount + 1).ToString() + "   ";
                 TabPage myTabPage = new TabPage(title);
                 tabPage.TabPages.Add(myTabPage);
@@ -44,14 +45,14 @@ namespace WebBrowser.UI
                 NewTabUserControl.Instance.BringToFront();
         }
     
-
+        //CLOSING TAB
         private void CloseCurrentTabMenuItem_Click(object sender, EventArgs e)
         {
             // Removes the selected tab:  
             tabPage.TabPages.Remove(tabPage.SelectedTab); 
         }
 
-
+        //MAIN ON LOAD
         private void MainWindow_Load_1(object sender, EventArgs e)
         {
             string title = "TabPage ";
@@ -61,20 +62,22 @@ namespace WebBrowser.UI
             tabPage1.Controls.Add(new NewTabUserControl());
             NewTabUserControl.Instance.Dock = DockStyle.Fill;
             NewTabUserControl.Instance.BringToFront();
-        }
 
-        private void manageHistoryMenuItem_Click(object sender, EventArgs e)
-        {
-            var HistoryForm = new HistoryManagerForm();
-            HistoryForm.ShowDialog();
-        }
 
+        }
+        //MANAGE BOOKMARKS
         private void manageBookmarksMenuItem_Click(object sender, EventArgs e)
         {
             var BookmarkForm = new BookmarkManagerForm();
             BookmarkForm.ShowDialog();
         }
-
+        //MANAGE HISTORY
+        private void manageHistoryMenuItem_Click(object sender, EventArgs e)
+        {
+            var HistoryForm = new HistoryManagerForm();
+            HistoryForm.ShowDialog();
+        }
+        //CLEAR HISTORY
         private void clearHistoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var adapter = new browserHistoryTableAdapter();
@@ -87,6 +90,43 @@ namespace WebBrowser.UI
 
         }
 
+        //TAB CONTROL OPEN / CLOSE
+        private void tabControl_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            e.Graphics.DrawString("x", e.Font, Brushes.Black, e.Bounds.Right - 15, e.Bounds.Top + 4);
+            e.Graphics.DrawString(this.tabPage.TabPages[e.Index].Text, e.Font, Brushes.Black, e.Bounds.Left + 12, e.Bounds.Top + 4);
+            e.DrawFocusRectangle();
+        }
+
+        private void tabPage_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //// If the last TabPage is selected then Create a new TabPage
+            //if (tabPage.SelectedIndex == tabPage.TabPages.Count - 1)
+            //    tabPage.TabPages.Add(tabPage1);
+        }
+
+        private void tabPage_MouseDown(object sender, MouseEventArgs e)
+        {
+            for (int i = 0; i < this.tabPage.TabPages.Count; i++)
+            {
+                Rectangle r = tabPage.GetTabRect(i);
+                //Getting the position of the "x" mark.
+                Rectangle closeButton = new Rectangle(r.Right - 15, r.Top + 4, 9, 7);
+
+                if (closeButton.Contains(e.Location))
+                {
+                    if (MessageBox.Show("Would you like to Close this Tab?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        this.tabPage.TabPages.RemoveAt(i);
+                        break;
+                    }
+                }
+            }
+
+        }
+
+
     }
+    
 }
 

@@ -143,6 +143,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="BookmarkDataSet.xsc">
       <DependentUpon>BookmarkDataSet.xsd</DependentUpon>
@@ -219,6 +220,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>BrowserDatabase.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\closeTabBtn.bmp" />
+    <None Include="Resources\closeTab.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
