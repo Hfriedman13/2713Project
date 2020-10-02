@@ -179,9 +179,8 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(1857, 1132);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "TabPage1  ";
+            this.tabPage1.Text = "TabPage1          . ";
             this.tabPage1.UseVisualStyleBackColor = true;
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // browserDatabaseDataSet
             // 

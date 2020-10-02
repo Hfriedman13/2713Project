@@ -102,6 +102,7 @@
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(46, 37);
             this.btnHome.Text = "btnHome";
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // txtBoxAddressbar
             // 
@@ -138,7 +139,6 @@
             this.webBrowser1.Name = "webBrowser1";
             this.webBrowser1.Size = new System.Drawing.Size(1949, 1298);
             this.webBrowser1.TabIndex = 2;
-           
             this.webBrowser1.ProgressChanged += new System.Windows.Forms.WebBrowserProgressChangedEventHandler(this.webBrowser1_ProgressChanged);
             // 
             // timer1

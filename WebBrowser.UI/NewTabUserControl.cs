@@ -30,6 +30,7 @@ namespace WebBrowser.UI
                 if (_instance == null)
                     _instance = new NewTabUserControl();
                 return _instance;
+
             }
         }
 
@@ -86,6 +87,12 @@ namespace WebBrowser.UI
              webBrowser1.Refresh();
         }
         //Home Button
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            string url = "www.google.com";
+            webBrowser1.Navigate(url);
+            webBrowser1.ScriptErrorsSuppressed = true;
+        }
 
         //Address Bar
         private void txtBoxAddress_KeyUp(object sender, KeyEventArgs e)
@@ -199,6 +206,8 @@ namespace WebBrowser.UI
             
 
         }
+
+
     }
 }
 
