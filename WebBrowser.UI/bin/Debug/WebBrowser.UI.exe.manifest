@@ -66,14 +66,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WebBrowser.UI.exe" size="90624">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WebBrowser.UI.exe" size="92160">
       <assemblyIdentity name="WebBrowser.UI" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>eiwKCHPe1F5vKQqIHb9B4Vv5KO1b0EqSIBi9X0+RtvU=</dsig:DigestValue>
+        <dsig:DigestValue>myhOIhqbMEa5VudUxYEJlmmznntIQyFCPiQCrEGR22k=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

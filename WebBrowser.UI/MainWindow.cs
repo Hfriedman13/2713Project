@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,10 +15,28 @@ namespace WebBrowser.UI
 {
     public partial class MainWindow : Form
     {
-
+        private Button printButton;
+        private Font printFont;
+        private StreamReader streamToPrint;
         public MainWindow()
         {
             InitializeComponent();
+            this.components = new Container();
+            this.printButton = new Button();
+
+            this.ClientSize = new Size(504, 381);
+            this.Text = "Print Example";
+
+            printButton.ImageAlign = ContentAlignment.MiddleLeft;
+            printButton.Location = new Point(32, 110);
+            printButton.FlatStyle = FlatStyle.Flat;
+            printButton.TabIndex = 0;
+            printButton.Text = "Print the file.";
+            printButton.Size = new Size(136, 40);
+            printButton.Click += new EventHandler(printPageMenuItem_Click);
+
+            this.Controls.Add(printButton);
+
         }
 
         //Menu Items
@@ -36,7 +56,7 @@ namespace WebBrowser.UI
         private void NewTabMenuItem_Click(object sender, EventArgs e)
         {
                 
-                string title = "TabPage" + (tabPage.TabCount + 1).ToString() + "   ";
+                string title = "TabPage" + (tabPage.TabCount + 1).ToString() + "    .";
                 TabPage myTabPage = new TabPage(title);
                 tabPage.TabPages.Add(myTabPage);
 
@@ -56,15 +76,13 @@ namespace WebBrowser.UI
         private void MainWindow_Load_1(object sender, EventArgs e)
         {
             string title = "TabPage ";
-            // + (tabPage.TabCount).ToString();
             TabPage myTabPage = new TabPage(title);
 
             tabPage1.Controls.Add(new NewTabUserControl());
             NewTabUserControl.Instance.Dock = DockStyle.Fill;
             NewTabUserControl.Instance.BringToFront();
-
-
         }
+
         //MANAGE BOOKMARKS
         private void manageBookmarksMenuItem_Click(object sender, EventArgs e)
         {
@@ -124,9 +142,66 @@ namespace WebBrowser.UI
             }
 
         }
+        //PRINTING 
+        private void printPageMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                streamToPrint = new StreamReader
+                   ("C:/WebBrowser/testing.txt");
+                try
+                {
+                    printFont = new Font("Arial", 10);
+                    PrintDocument pd = new PrintDocument();
+                    pd.PrintPage += new PrintPageEventHandler
+                       (this.pd_PrintPage);
+                    pd.Print();
+                }
+                finally
+                {
+                    streamToPrint.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        // The PrintPage event is raised for each page to be printed.
+        private void pd_PrintPage(object sender, PrintPageEventArgs ev)
+        {
+            float linesPerPage = 0;
+            float yPos = 0;
+            int count = 0;
+            float leftMargin = ev.MarginBounds.Left;
+            float topMargin = ev.MarginBounds.Top;
+            string line = null;
 
+            // Calculate the number of lines per page.
+            linesPerPage = ev.MarginBounds.Height /
+               printFont.GetHeight(ev.Graphics);
 
+            // Print each line of the file.
+            while (count < linesPerPage &&
+               ((line = streamToPrint.ReadLine()) != null))
+            {
+                yPos = topMargin + (count *
+                   printFont.GetHeight(ev.Graphics));
+                ev.Graphics.DrawString(line, printFont, Brushes.Black,
+                   leftMargin, yPos, new StringFormat());
+                count++;
+            }
+
+            // If more lines exist, print another page.
+            if (line != null)
+                ev.HasMorePages = true;
+            else
+                ev.HasMorePages = false;
+        }
     }
-    
+
 }
+
+    
+
 
