@@ -20,21 +20,6 @@ namespace WebBrowser.UI
             InitializeComponent();
 
             //print
-            this.components = new Container();
-            this.printButton = new Button();
-
-            this.ClientSize = new Size(504, 381);
-            this.Text = "Print Example";
-
-            printButton.ImageAlign = ContentAlignment.MiddleLeft;
-            printButton.Location = new Point(32, 110);
-            printButton.FlatStyle = FlatStyle.Flat;
-            printButton.TabIndex = 0;
-            printButton.Text = "Print the file.";
-            printButton.Size = new Size(136, 40);
-            printButton.Click += new EventHandler(printPageMenuItem_Click);
-
-            this.Controls.Add(printButton);
 
         }
 
@@ -177,63 +162,66 @@ namespace WebBrowser.UI
         }
 
         //PRINTING 
-        private void printPageMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                streamToPrint = new StreamReader
-                   ("C:/WebBrowser/testing.txt");
-                try
-                {
-                    printFont = new Font("Arial", 10);
-                    PrintDocument pd = new PrintDocument();
-                    pd.PrintPage += new PrintPageEventHandler
-                       (this.pd_PrintPage);
-                    pd.Print();
-                }
-                finally
-                {
-                    streamToPrint.Close();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-        // The PrintPage event is raised for each page to be printed.
-        private void pd_PrintPage(object sender, PrintPageEventArgs ev)
-        {
-            int count = 0;
-            float leftMargin = ev.MarginBounds.Left;
-            float topMargin = ev.MarginBounds.Top;
-            string line = null;
+        //private void printPageMenuItem_Click(object sender, EventArgs e)
+        //{
+        //    PrintDialog printDialog = new PrintDialog();
+        //    if (DialogResult.OK == printDialog.ShowDialog())
+        //    {
+        //        PrintPreviewDialog printPreview = new PrintPreviewDialog();
+        //        printPreview.Document = PrintDocument;
 
-            // Calculate the number of lines per page.
-            float linesPerPage = ev.MarginBounds.Height /
-               printFont.GetHeight(ev.Graphics);
+        //        // this is were you take the printersettings from the printDialog
+        //        printPreview.Document.PrinterSettings = printDialog.PrinterSettings;
 
-            // Print each line of the file.
-            while (count < linesPerPage &&
-               ((line = streamToPrint.ReadLine()) != null))
-            {
-                float yPos = topMargin + (count *
-       printFont.GetHeight(ev.Graphics));
-                ev.Graphics.DrawString(line, printFont, Brushes.Black,
-                   leftMargin, yPos, new StringFormat());
-                count++;
-            }
+        //        printIssues.DefaultPageSettings.Landscape = true;
+        //        printPreview.ShowDialog();
+        //    }
+        //}
+        //private void pd_PrintPage(object sender, PrintPageEventArgs e)
+        //{
 
-            // If more lines exist, print another page.
-            if (line != null)
-                ev.HasMorePages = true;
-            else
-                ev.HasMorePages = false;
-        }
+
+
+        //}
         //SAVING PAGE 
         private void saveAsHTMLMenuItem_Click(object sender, EventArgs e)
         {
+            // Displays a SaveFileDialog so the user can save the Image
+            // assigned to Button2.
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.Filter = "JPeg Image|*.jpg|Bitmap Image|*.bmp|Gif Image|*.gif";
+            saveFileDialog1.Title = "Save an Image File";
+            saveFileDialog1.ShowDialog();
 
+            // If the file name is not an empty string open it for saving.
+            if (saveFileDialog1.FileName != "")
+            {
+                // Saves the Image via a FileStream created by the OpenFile method.
+                FileStream fs =
+                    (FileStream)saveFileDialog1.OpenFile();
+                // Saves the Image in the appropriate ImageFormat based upon the
+                // File type selected in the dialog box.
+                // NOTE that the FilterIndex property is one-based.
+                //switch (saveFileDialog1.FilterIndex)
+                //{
+                //    //case 1:
+                //    //    this.button2.Image.Save(fs,
+                //    //      System.Drawing.Imaging.ImageFormat.Jpeg);
+                //    //    break;
+
+                //    //case 2:
+                //    //    this.button2.Image.Save(fs,
+                //    //      System.Drawing.Imaging.ImageFormat.Bmp);
+                //    //    break;
+
+                //    //case 3:
+                //    //    this.button2.Image.Save(fs,
+                //    //      System.Drawing.Imaging.ImageFormat.Gif);
+                //    //    break;
+                //}
+
+                fs.Close();
+            }
         }
 
     }

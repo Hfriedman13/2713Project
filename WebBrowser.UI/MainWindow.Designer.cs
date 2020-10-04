@@ -114,7 +114,7 @@
             this.printPageMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
             this.printPageMenuItem.Size = new System.Drawing.Size(427, 44);
             this.printPageMenuItem.Text = "Print Page";
-            this.printPageMenuItem.Click += new System.EventHandler(this.printPageMenuItem_Click);
+            //this.printPageMenuItem.Click += new System.EventHandler(this.printPageMenuItem_Click);
             // 
             // ExitMenuItem
             // 
