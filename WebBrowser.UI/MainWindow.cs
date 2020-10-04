@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using WebBrowser.UI.BrowserDatabaseDataSetTableAdapters;
 
@@ -18,9 +14,12 @@ namespace WebBrowser.UI
         private Button printButton;
         private Font printFont;
         private StreamReader streamToPrint;
+
         public MainWindow()
         {
             InitializeComponent();
+
+            //print
             this.components = new Container();
             this.printButton = new Button();
 
@@ -39,12 +38,12 @@ namespace WebBrowser.UI
 
         }
 
-        //Menu Items
+        //MENU ITEMS
         private void ExitMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
+        //HELP MENU 
         private void HelpMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Hannah Friedman, hzf0023" + "\n" + 
@@ -52,11 +51,11 @@ namespace WebBrowser.UI
                 "\n" + "I am very excited about creating this and cant wait to explore more of Win. Forms!");
 
         }
-        //Creating New Tab
+        //OPEN New Tab
         private void NewTabMenuItem_Click(object sender, EventArgs e)
         {
-                
-                string title = "TabPage" + (tabPage.TabCount + 1).ToString() + "    .";
+
+                string title = "New Tab   "; //"TabPage" + (tabPage.TabCount + 1).ToString() + "    .";
                 TabPage myTabPage = new TabPage(title);
                 tabPage.TabPages.Add(myTabPage);
 
@@ -75,7 +74,7 @@ namespace WebBrowser.UI
         //MAIN ON LOAD
         private void MainWindow_Load_1(object sender, EventArgs e)
         {
-            string title = "TabPage ";
+            string title = "New Tab   ";
             TabPage myTabPage = new TabPage(title);
 
             tabPage1.Controls.Add(new NewTabUserControl());
@@ -111,29 +110,62 @@ namespace WebBrowser.UI
         //TAB CONTROL OPEN / CLOSE
         private void tabControl_DrawItem(object sender, DrawItemEventArgs e)
         {
-            e.Graphics.DrawString("x", e.Font, Brushes.Black, e.Bounds.Right - 15, e.Bounds.Top + 4);
-            e.Graphics.DrawString(this.tabPage.TabPages[e.Index].Text, e.Font, Brushes.Black, e.Bounds.Left + 12, e.Bounds.Top + 4);
-            e.DrawFocusRectangle();
+            var tabPage1 = this.tabPage.TabPages[e.Index];
+            var tabRect = this.tabPage.GetTabRect(e.Index);
+            tabRect.Inflate(-2, -2);
+            if (e.Index == this.tabPage.TabCount - 1)
+            {
+                var addImage = Properties.Resources.addTab;
+                e.Graphics.DrawImage(addImage,
+                    tabRect.Left + (tabRect.Width - addImage.Width) / 2,
+                    tabRect.Top + (tabRect.Height - addImage.Height) / 2);
+            }
+            else
+            {
+                var closeImage = Properties.Resources.deleteTab;
+                e.Graphics.DrawImage(closeImage,
+                    (tabRect.Right - closeImage.Width),
+                    tabRect.Top + (tabRect.Height - closeImage.Height) / 2);
+                TextRenderer.DrawText(e.Graphics, tabPage1.Text, tabPage1.Font,
+                    tabRect, tabPage1.ForeColor, TextFormatFlags.Left);
+            }
         }
 
-        private void tabPage_SelectedIndexChanged(object sender, EventArgs e)
+        private void tabPage_Selecting(object sender, TabControlCancelEventArgs e)
         {
-            //// If the last TabPage is selected then Create a new TabPage
-            //if (tabPage.SelectedIndex == tabPage.TabPages.Count - 1)
-            //    tabPage.TabPages.Add(tabPage1);
+            if (e.TabPageIndex == this.tabPage.TabCount - 1)
+                e.Cancel = true;
         }
 
         private void tabPage_MouseDown(object sender, MouseEventArgs e)
         {
-            for (int i = 0; i < this.tabPage.TabPages.Count; i++)
-            {
-                Rectangle r = tabPage.GetTabRect(i);
-                //Getting the position of the "x" mark.
-                Rectangle closeButton = new Rectangle(r.Right - 15, r.Top + 4, 9, 7);
+            var lastIndex = this.tabPage.TabCount - 1;
 
-                if (closeButton.Contains(e.Location))
+            if (this.tabPage.GetTabRect(lastIndex).Contains(e.Location))
+            {
+                //this.tabPage.TabPages.Insert(lastIndex, "TabPage " + (tabPage.TabCount + 1).ToString());
+                this.tabPage.SelectedIndex = lastIndex;
+                string title = "New Tab   ";
+                TabPage myTabPage = new TabPage(title);
+                tabPage.TabPages.Add(myTabPage);
+
+                myTabPage.Controls.Add(new NewTabUserControl());
+                NewTabUserControl.Instance.Dock = DockStyle.Fill;
+                NewTabUserControl.Instance.BringToFront();
+            }
+            else
+            {
+                for (var i = 0; i < this.tabPage.TabPages.Count; i++)
                 {
-                    if (MessageBox.Show("Would you like to Close this Tab?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    var tabRect = this.tabPage.GetTabRect(i);
+                    tabRect.Inflate(-2, -2);
+                    var closeImage = Properties.Resources.deleteTab;
+                    var imageRect = new Rectangle(
+                        (tabRect.Right - closeImage.Width),
+                        tabRect.Top + (tabRect.Height - closeImage.Height) / 2,
+                        closeImage.Width,
+                        closeImage.Height);
+                    if (imageRect.Contains(e.Location))
                     {
                         this.tabPage.TabPages.RemoveAt(i);
                         break;
@@ -141,7 +173,9 @@ namespace WebBrowser.UI
                 }
             }
 
+
         }
+
         //PRINTING 
         private void printPageMenuItem_Click(object sender, EventArgs e)
         {
@@ -170,23 +204,21 @@ namespace WebBrowser.UI
         // The PrintPage event is raised for each page to be printed.
         private void pd_PrintPage(object sender, PrintPageEventArgs ev)
         {
-            float linesPerPage = 0;
-            float yPos = 0;
             int count = 0;
             float leftMargin = ev.MarginBounds.Left;
             float topMargin = ev.MarginBounds.Top;
             string line = null;
 
             // Calculate the number of lines per page.
-            linesPerPage = ev.MarginBounds.Height /
+            float linesPerPage = ev.MarginBounds.Height /
                printFont.GetHeight(ev.Graphics);
 
             // Print each line of the file.
             while (count < linesPerPage &&
                ((line = streamToPrint.ReadLine()) != null))
             {
-                yPos = topMargin + (count *
-                   printFont.GetHeight(ev.Graphics));
+                float yPos = topMargin + (count *
+       printFont.GetHeight(ev.Graphics));
                 ev.Graphics.DrawString(line, printFont, Brushes.Black,
                    leftMargin, yPos, new StringFormat());
                 count++;
@@ -198,6 +230,12 @@ namespace WebBrowser.UI
             else
                 ev.HasMorePages = false;
         }
+        //SAVING PAGE 
+        private void saveAsHTMLMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 
 }

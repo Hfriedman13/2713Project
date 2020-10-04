@@ -220,8 +220,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>BrowserDatabase.mdf</DependentUpon>
     </Content>
-    <None Include="Resources\closeTabBtn.bmp" />
-    <None Include="Resources\closeTab.png" />
+    <None Include="Resources\deleteTab.png" />
+    <None Include="Resources\addTab.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

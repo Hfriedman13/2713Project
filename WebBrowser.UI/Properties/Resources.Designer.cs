@@ -63,9 +63,19 @@ namespace WebBrowser.UI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap closeTab {
+        internal static System.Drawing.Bitmap addTab {
             get {
-                object obj = ResourceManager.GetObject("closeTab", resourceCulture);
+                object obj = ResourceManager.GetObject("addTab", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap deleteTab {
+            get {
+                object obj = ResourceManager.GetObject("deleteTab", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
