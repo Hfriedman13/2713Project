@@ -114,12 +114,26 @@ namespace WebBrowser.UI
                     txtBoxAddressbar.Text = url;
                     webBrowser1.Navigate(url);
                     webBrowser1.ScriptErrorsSuppressed = true;
-                    
+
                     //adds url to stack
                     backLinks.Push(url);
                     forwardLinks.Push(url);
 
-                    
+                    string[] title = url.Split('.');
+
+                    int titleIdx;
+
+                    if (title[0].Equals("www"))
+                    {
+                        titleIdx = 1;
+                    }
+                    else
+                    {
+                        titleIdx = 0;
+                    }
+
+                    title[titleIdx] = char.ToUpper(title[titleIdx].First()) + title[titleIdx].Substring(1).ToLower();
+                    this.tp.Text = title[titleIdx] + "     .";
                 }
             }
         }
