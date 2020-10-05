@@ -11,15 +11,9 @@ namespace WebBrowser.UI
 {
     public partial class MainWindow : Form
     {
-        private Button printButton;
-        private Font printFont;
-        private StreamReader streamToPrint;
-
         public MainWindow()
         {
             InitializeComponent();
-
-            //print
 
         }
 
@@ -44,7 +38,7 @@ namespace WebBrowser.UI
                 TabPage myTabPage = new TabPage(title);
                 tabPage.TabPages.Add(myTabPage);
 
-                myTabPage.Controls.Add(new NewTabUserControl());
+                myTabPage.Controls.Add(new NewTabUserControl(myTabPage));
                 NewTabUserControl.Instance.Dock = DockStyle.Fill;
                 NewTabUserControl.Instance.BringToFront();
         }
@@ -62,7 +56,7 @@ namespace WebBrowser.UI
             string title = "New Tab   ";
             TabPage myTabPage = new TabPage(title);
 
-            tabPage1.Controls.Add(new NewTabUserControl());
+            tabPage1.Controls.Add(new NewTabUserControl(myTabPage));
             NewTabUserControl.Instance.Dock = DockStyle.Fill;
             NewTabUserControl.Instance.BringToFront();
         }
@@ -128,13 +122,12 @@ namespace WebBrowser.UI
 
             if (this.tabPage.GetTabRect(lastIndex).Contains(e.Location))
             {
-                //this.tabPage.TabPages.Insert(lastIndex, "TabPage " + (tabPage.TabCount + 1).ToString());
                 this.tabPage.SelectedIndex = lastIndex;
                 string title = "New Tab   ";
                 TabPage myTabPage = new TabPage(title);
                 tabPage.TabPages.Add(myTabPage);
 
-                myTabPage.Controls.Add(new NewTabUserControl());
+                myTabPage.Controls.Add(new NewTabUserControl(myTabPage));
                 NewTabUserControl.Instance.Dock = DockStyle.Fill;
                 NewTabUserControl.Instance.BringToFront();
             }
@@ -164,25 +157,10 @@ namespace WebBrowser.UI
         //PRINTING 
         //private void printPageMenuItem_Click(object sender, EventArgs e)
         //{
-        //    PrintDialog printDialog = new PrintDialog();
-        //    if (DialogResult.OK == printDialog.ShowDialog())
-        //    {
-        //        PrintPreviewDialog printPreview = new PrintPreviewDialog();
-        //        printPreview.Document = PrintDocument;
-
-        //        // this is were you take the printersettings from the printDialog
-        //        printPreview.Document.PrinterSettings = printDialog.PrinterSettings;
-
-        //        printIssues.DefaultPageSettings.Landscape = true;
-        //        printPreview.ShowDialog();
-        //    }
-        //}
-        //private void pd_PrintPage(object sender, PrintPageEventArgs e)
-        //{
-
-
 
         //}
+
+
         //SAVING PAGE 
         private void saveAsHTMLMenuItem_Click(object sender, EventArgs e)
         {
@@ -199,26 +177,7 @@ namespace WebBrowser.UI
                 // Saves the Image via a FileStream created by the OpenFile method.
                 FileStream fs =
                     (FileStream)saveFileDialog1.OpenFile();
-                // Saves the Image in the appropriate ImageFormat based upon the
-                // File type selected in the dialog box.
-                // NOTE that the FilterIndex property is one-based.
-                //switch (saveFileDialog1.FilterIndex)
-                //{
-                //    //case 1:
-                //    //    this.button2.Image.Save(fs,
-                //    //      System.Drawing.Imaging.ImageFormat.Jpeg);
-                //    //    break;
-
-                //    //case 2:
-                //    //    this.button2.Image.Save(fs,
-                //    //      System.Drawing.Imaging.ImageFormat.Bmp);
-                //    //    break;
-
-                //    //case 3:
-                //    //    this.button2.Image.Save(fs,
-                //    //      System.Drawing.Imaging.ImageFormat.Gif);
-                //    //    break;
-                //}
+        
 
                 fs.Close();
             }

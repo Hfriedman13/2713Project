@@ -17,7 +17,8 @@ namespace WebBrowser.UI
     public partial class NewTabUserControl : UserControl
     {
 
-        public string tabTitle = ""; 
+        public string tabTitle = "";
+        TabPage tp = new TabPage();
 
         Stack<string> backLinks = new Stack<string>();
         Stack<string> forwardLinks = new Stack<string>();
@@ -38,11 +39,18 @@ namespace WebBrowser.UI
         {
             InitializeComponent();
         }
+        public NewTabUserControl(TabPage tab)
+        {
+            this.tabTitle = tab.Text;
+            this.tp = tab;
 
-        //Tool Strip 
+            InitializeComponent();
+        }
 
-        //Back Button 
-        private void btnBack_Click(object sender, EventArgs e)
+            //Tool Strip 
+
+            //Back Button 
+            private void btnBack_Click(object sender, EventArgs e)
         {
             //MessageBox.Show(backLinks.ToString());
             
@@ -123,8 +131,6 @@ namespace WebBrowser.UI
             webBrowser1.Navigate(url);
             webBrowser1.ScriptErrorsSuppressed = true;
 
-           
-
             //adds url to stacks 
             backLinks.Push(url);
             forwardLinks.Push(url);
@@ -141,6 +147,9 @@ namespace WebBrowser.UI
             {
                 titleIdx = 0;
             }
+
+            title[titleIdx] = char.ToUpper(title[titleIdx].First()) + title[titleIdx].Substring(1).ToLower();
+            this.tp.Text = title[titleIdx] + "     .";
 
 
             HistoryManager.AddItem(url, title[titleIdx]);
