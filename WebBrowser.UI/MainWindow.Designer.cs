@@ -59,7 +59,7 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.Blue;
+            this.menuStrip1.BackColor = System.Drawing.Color.SlateBlue;
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -68,7 +68,7 @@
             this.HelpMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1865, 40);
+            this.menuStrip1.Size = new System.Drawing.Size(1865, 42);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -82,7 +82,7 @@
             this.ExitMenuItem});
             this.fileMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.fileMenuItem.Name = "fileMenuItem";
-            this.fileMenuItem.Size = new System.Drawing.Size(72, 36);
+            this.fileMenuItem.Size = new System.Drawing.Size(72, 38);
             this.fileMenuItem.Text = "File";
             // 
             // newTabMenuItem
@@ -130,7 +130,7 @@
             this.manageBookmarksMenuItem});
             this.toolsMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.toolsMenuItem.Name = "toolsMenuItem";
-            this.toolsMenuItem.Size = new System.Drawing.Size(90, 36);
+            this.toolsMenuItem.Size = new System.Drawing.Size(90, 38);
             this.toolsMenuItem.Text = "Tools";
             // 
             // manageHistoryMenuItem
@@ -160,7 +160,7 @@
             // 
             this.HelpMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.HelpMenuItem.Name = "HelpMenuItem";
-            this.HelpMenuItem.Size = new System.Drawing.Size(85, 36);
+            this.HelpMenuItem.Size = new System.Drawing.Size(85, 38);
             this.HelpMenuItem.Text = "Help";
             this.HelpMenuItem.Click += new System.EventHandler(this.HelpMenuItem_Click);
             // 
@@ -169,10 +169,10 @@
             this.tabPage.Controls.Add(this.tabPage1);
             this.tabPage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabPage.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
-            this.tabPage.Location = new System.Drawing.Point(0, 40);
+            this.tabPage.Location = new System.Drawing.Point(0, 42);
             this.tabPage.Name = "tabPage";
             this.tabPage.SelectedIndex = 0;
-            this.tabPage.Size = new System.Drawing.Size(1865, 1170);
+            this.tabPage.Size = new System.Drawing.Size(1865, 1168);
             this.tabPage.TabIndex = 1;
             this.tabPage.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabControl_DrawItem);
             this.tabPage.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.tabPage_Selecting);
@@ -184,7 +184,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1857, 1132);
+            this.tabPage1.Size = new System.Drawing.Size(1857, 1130);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "TabPage1    . ";
             this.tabPage1.UseVisualStyleBackColor = true;
