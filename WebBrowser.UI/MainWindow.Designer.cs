@@ -59,7 +59,7 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.Lavender;
+            this.menuStrip1.BackColor = System.Drawing.Color.Blue;
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -80,6 +80,7 @@
             this.saveAsHTMLMenuItem,
             this.printPageMenuItem,
             this.ExitMenuItem});
+            this.fileMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.fileMenuItem.Name = "fileMenuItem";
             this.fileMenuItem.Size = new System.Drawing.Size(72, 36);
             this.fileMenuItem.Text = "File";
@@ -114,7 +115,6 @@
             this.printPageMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
             this.printPageMenuItem.Size = new System.Drawing.Size(427, 44);
             this.printPageMenuItem.Text = "Print Page";
-            //this.printPageMenuItem.Click += new System.EventHandler(this.printPageMenuItem_Click);
             // 
             // ExitMenuItem
             // 
@@ -128,6 +128,7 @@
             this.toolsMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.manageHistoryMenuItem,
             this.manageBookmarksMenuItem});
+            this.toolsMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.toolsMenuItem.Name = "toolsMenuItem";
             this.toolsMenuItem.Size = new System.Drawing.Size(90, 36);
             this.toolsMenuItem.Text = "Tools";
@@ -157,6 +158,7 @@
             // 
             // HelpMenuItem
             // 
+            this.HelpMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.HelpMenuItem.Name = "HelpMenuItem";
             this.HelpMenuItem.Size = new System.Drawing.Size(85, 36);
             this.HelpMenuItem.Text = "Help";

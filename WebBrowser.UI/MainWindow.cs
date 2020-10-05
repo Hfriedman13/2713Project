@@ -1,9 +1,6 @@
 ﻿using System;
-using System.ComponentModel;
 using System.Drawing;
-using System.Drawing.Printing;
 using System.IO;
-using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using WebBrowser.UI.BrowserDatabaseDataSetTableAdapters;
 
